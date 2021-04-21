@@ -1,3 +1,5 @@
+/*          FLEX            */
+
 @mixin flex-center-row {
     display: flex;
     flex-direction: row;
@@ -10,4 +12,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/*          TRANSITION            */
+
+@mixin transition-ease($property) {
+    transition: $property 0.3s ease;
 }
