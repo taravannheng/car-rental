@@ -344,3 +344,12 @@ template {
 [hidden] {
   display: none;
 }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  color: whitesmoke;
+}
