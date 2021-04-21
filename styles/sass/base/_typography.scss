@@ -1,0 +1,33 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-weight: setFontWeight(black-weight);
+    font-size: setFontSize(big-size);
+    line-height: setLineHeight(triple-height);
+}
+
+h2 {
+    font-weight: setFontWeight(bold-weight);
+    font-size: setFontSize(medium-size);
+    line-height: setLineHeight(double-height);    
+}
+
+h3, h4, h5, h6 {
+    font-weight: setFontWeight(medium-weight);
+    font-size: setFontSize(normal-size);
+    line-height: setLineHeight(double-height);
+}
+
+p {
+    font-weight: setFontWeight(normal-weight);
+    font-size: setFontSize(normal-size);
+    line-height: setLineHeight(mono-height);
+}
+
+span {
+    font-weight: setFontWeight(normal-weight);
+    font-size: setFontSize(normal-size);
+    line-height: setLineHeight(mono-height);   
+}
