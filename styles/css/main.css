@@ -353,3 +353,37 @@ template {
 body {
   color: whitesmoke;
 }
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 41.88px;
+  line-height: 47.11px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 25.88px;
+  line-height: 29.12px;
+}
+
+h3, h4, h5, h6 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 29.12px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
