@@ -2,6 +2,8 @@
 /*                              FONTS                   */
 /*                              COLORS                   */
 /*                              FONTS                   */
+/*          FLEX            */
+/*          TRANSITION            */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -404,5 +406,50 @@ span {
 }
 
 .title__text--light {
+  color: whitesmoke;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 20px;
+  border: 0;
+  background-color: #0071ff;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  /*          PSEUDO CLASSES      */
+  /*          ELEMENTS            */
+}
+
+.button:focus {
+  outline: 0;
+}
+
+.button:hover {
+  background-color: #114beb;
+}
+
+.button:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.button__text {
+  font-size: 16px;
   color: whitesmoke;
 }

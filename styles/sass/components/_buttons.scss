@@ -1,0 +1,31 @@
+.button {
+    @include flex-center-row;
+    padding: 5px 20px;
+    border: 0;
+
+    background-color: setColor(light-blue-color);
+    border-radius: 2px;
+    cursor: pointer;
+    @include transition-ease(transform);
+
+    /*          PSEUDO CLASSES      */
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover {
+        background-color: setColor(dark-blue-color);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+    /*          ELEMENTS            */
+
+    &__text {
+        font-size: setFontSize(normal-size);
+        color: setColor(light-color);
+    }
+}
