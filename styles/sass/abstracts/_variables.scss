@@ -1,0 +1,24 @@
+/*                              COLORS                   */
+
+$colors: (
+    "light": rgba(245, 245, 245, 1),
+    "dark": rgba(67, 66, 78, 1),
+    "blue": rgba(17, 75, 235, 1)
+);
+
+/*                              FONTS                   */
+
+$font-weights: (
+    "light": 300,
+    "normal": 400,
+    "medium": 500,
+    "bold": 700,
+    "black": 900
+);
+
+$font-sizes: (
+    "small": 0.9rem,
+    "normal": 1rem,
+    "medium": 1.2rem,
+    "big": 1.5rem
+);

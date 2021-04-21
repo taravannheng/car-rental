@@ -1,0 +1,15 @@
+/*                              COLORS                   */
+
+@function setColor($color) {
+    @return map-get($colors, $color);
+}
+
+/*                              FONTS                   */
+
+@function setFontWeight($font-weight) {
+    @return map-get($font-weights, $font-weight);
+}
+
+@function setFontSize($font-size) {
+    @return map-get($font-sizes, $font-size);
+}
