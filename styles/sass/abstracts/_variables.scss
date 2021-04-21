@@ -1,30 +1,30 @@
 /*                              COLORS                   */
 
 $colors: (
-    "light": rgba(245, 245, 245, 1),
-    "dark": rgba(67, 66, 78, 1),
-    "blue": rgba(17, 75, 235, 1)
+    "light-color": rgba(245, 245, 245, 1),
+    "dark-color": rgba(67, 66, 78, 1),
+    "blue-color": rgba(17, 75, 235, 1)
 );
 
 /*                              FONTS                   */
 
 $font-weights: (
-    "light": 300,
-    "normal": 400,
-    "medium": 500,
-    "bold": 700,
-    "black": 900
+    "light-weight": 300,
+    "normal-weight": 400,
+    "medium-weight": 500,
+    "bold-weight": 700,
+    "black-weight": 900
 );
 
 $font-sizes: (
-    "small": 9.88px,
-    "normal": 16px,
-    "medium": 25.88px,
-    "big": 41.88px
+    "small-size": 9.88px,
+    "normal-size": 16px,
+    "medium-size": 25.88px,
+    "big-size": 41.88px
 );
 
 $line-heights: (
-    "mono": 18px,
-    "double": 29.12px,
-    "triple": 47.11px
+    "mono-height": 18px,
+    "double-height": 29.12px,
+    "triple-height": 47.11px
 );
