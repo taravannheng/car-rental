@@ -387,3 +387,22 @@ span {
   font-size: 16px;
   line-height: 18px;
 }
+
+.title {
+  /*           ELEMENT           */
+}
+
+.title__text {
+  font-weight: 900;
+  font-size: 41.88px;
+  line-height: 47.11px;
+  /*          MODIFIERS           */
+}
+
+.title__text--dark {
+  color: #43424e;
+}
+
+.title__text--light {
+  color: whitesmoke;
+}

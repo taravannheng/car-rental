@@ -1,0 +1,20 @@
+.title {
+
+    /*           ELEMENT           */
+
+    &__text {
+        font-weight: setFontWeight(black-weight);
+        font-size: setFontSize(big-size);
+        line-height: setLineHeight(triple-height);
+
+        /*          MODIFIERS           */
+
+        &--dark {
+            color: setColor(dark-color);
+        }
+
+        &--light {
+            color: setColor(light-color);
+        }
+    }
+}
