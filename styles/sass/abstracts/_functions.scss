@@ -13,3 +13,7 @@
 @function setFontSize($font-size) {
     @return map-get($font-sizes, $font-size);
 }
+
+@function setLineHeight($line-height) {
+    @return map-get($line-heights, $line-height);
+}
