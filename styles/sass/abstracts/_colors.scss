@@ -1,5 +1,13 @@
+/*                              VARIABLES                   */
+
 $colors: (
     "light": rgba(245, 245, 245, 1),
     "dark": rgba(67, 66, 78, 1),
     "blue": rgba(17, 75, 235, 1)
 );
+
+/*                              FUNCTIONS                   */
+
+@function setColor($colorName) {
+    @return map-get($colors, $colorName);
+}
