@@ -8,6 +8,6 @@ $colors: (
 
 /*                              FUNCTIONS                   */
 
-@function setColor($colorName) {
-    @return map-get($colors, $colorName);
+@function setColor($color) {
+    @return map-get($colors, $color);
 }
