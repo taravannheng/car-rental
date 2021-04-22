@@ -8,7 +8,7 @@
     cursor: pointer;
     @include transition-ease(transform);
 
-    /*          PSEUDO CLASSES      */
+    //          PSEUDO CLASSES      //
 
     &:focus {
         outline: 0;
@@ -22,7 +22,7 @@
         transform: scale(0.95);
     }
 
-    /*          ELEMENTS            */
+    //          ELEMENTS            //
 
     &__text {
         font-size: setFontSize(nm-x1-size);

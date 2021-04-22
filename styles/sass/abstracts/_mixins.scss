@@ -1,4 +1,4 @@
-/*          FLEX            */
+//          FLEX            //
 
 @mixin flex-center-row {
     display: flex;
@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-/*          TRANSITION            */
+//          TRANSITION            //
 
 @mixin transition-ease($property) {
     transition: $property 0.3s ease;

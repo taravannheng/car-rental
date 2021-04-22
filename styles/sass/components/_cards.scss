@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    width: 400px;
+    max-width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border-radius: 5px;
+
+    //          ELEMENTS            //
+
+    &__img {
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+        margin-bottom: 15px;
+
+        background-image: url('/assets/images/x-trail.jpeg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__title {
+        margin: 0 0 15px 10px;
+        
+        //          ELEMENTS            //
+
+        & span {
+            font-weight: setFontWeight(normal-weight);
+            font-size: setFontSize(md-x1-size);
+        }
+    }
+
+    &__details {
+        display: flex;
+        padding: 0 10px;
+        margin-bottom: 15px;
+        overflow: hidden;
+
+        font-size: setFontSize(nm-x1-size);
+        line-height: setLineHeight(double-x1-height);
+
+        //          ELEMENTS            //
+
+        &-labels, &-texts {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        &-labels {
+            margin-right: 10px;
+            font-weight: setFontWeight(medium-weight);
+        }
+    }
+
+    &__description {
+        height: clamp(100px, 100px, 100px);
+        padding: 0 10px;
+        margin-bottom: 15px;
+        overflow-x: hidden;
+        
+        //          ELEMENTS            //
+
+        &-text {
+            margin: 0;
+            font-size: setFontSize(nm-x1-size);
+        }
+    }
+
+    &__button {
+        min-width: 125px;
+        width: 125px;
+        max-width: 125px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+}

@@ -1,13 +1,13 @@
 .title {
 
-    /*           ELEMENT           */
+    //           ELEMENT           //
 
     &__text {
         font-weight: setFontWeight(black-weight);
         font-size: setFontSize(l-x2-size);
         line-height: setLineHeight(triple-x2-height);
 
-        /*          MODIFIERS           */
+        //          MODIFIERS           //
 
         &--dark {
             color: setColor(dark-color);
