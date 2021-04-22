@@ -18,14 +18,21 @@ $font-weights: (
 );
 
 $font-sizes: (
-    "small-size": 9.88px,
-    "normal-size": 16px,
-    "medium-size": 25.88px,
-    "big-size": 41.88px
+    "s-x1-size": 9.88px,
+    "s-x2-size": 12.94px,
+    "nm-x1-size": 14.47px,
+    "nm-x2-size": 16px,
+    "md-x1-size": 20.94px,
+    "md-x2-size": 25.88px,
+    "l-x1-size": 33.88px,
+    "l-x2-size": 41.88px
 );
 
 $line-heights: (
-    "mono-height": 18px,
-    "double-height": 29.12px,
-    "triple-height": 47.11px
+    "mono-x1-height": 18px,
+    "mono-x2-height": 23.56px,
+    "double-x1-height": 29.12px,
+    "double-x2-height": 38.11px,
+    "triple-x1-height": 42.61px,
+    "triple-x2-height": 47.11px
 );
