@@ -4,30 +4,30 @@ body {
 
 h1 {
     font-weight: setFontWeight(black-weight);
-    font-size: setFontSize(big-size);
-    line-height: setLineHeight(triple-height);
+    font-size: setFontSize(l-x2-size);
+    line-height: setLineHeight(triple-x2-height);
 }
 
 h2 {
     font-weight: setFontWeight(bold-weight);
-    font-size: setFontSize(medium-size);
-    line-height: setLineHeight(double-height);    
+    font-size: setFontSize(md-x2-size);
+    line-height: setLineHeight(double-x2-height);    
 }
 
 h3, h4, h5, h6 {
     font-weight: setFontWeight(medium-weight);
-    font-size: setFontSize(normal-size);
-    line-height: setLineHeight(double-height);
+    font-size: setFontSize(nm-x2-size);
+    line-height: setLineHeight(double-x2-height);
 }
 
 p {
     font-weight: setFontWeight(normal-weight);
-    font-size: setFontSize(normal-size);
-    line-height: setLineHeight(mono-height);
+    font-size: setFontSize(nm-x2-size);
+    line-height: setLineHeight(mono-x2-height);
 }
 
 span {
     font-weight: setFontWeight(normal-weight);
-    font-size: setFontSize(normal-size);
-    line-height: setLineHeight(mono-height);   
+    font-size: setFontSize(nm-x2-size);
+    line-height: setLineHeight(mono-x2-height);   
 }
