@@ -10,7 +10,8 @@
             "fuelType": "petrol",
             "seats": "7",
             "pricePerDay": "360",
-            "description": "The Nissan X-trail is a compact crossover SUV produced by the Japanese automaker Nissan."
+            "description": "The Nissan X-trail is a compact crossover SUV produced by the Japanese automaker Nissan.",
+            "image": "/assets/images/x-trail.jpeg"
         },
         {
             "category": "Sedan",
@@ -22,7 +23,8 @@
             "fuelType": "petrol",
             "seats": "5",
             "pricePerDay": "240",
-            "description": "The Toyota Camry is the safest, quietest, most fuel-efficient car in its class, and we have no reason to doubt those claims."
+            "description": "The Toyota Camry is the safest, quietest, most fuel-efficient car in its class, and we have no reason to doubt those claims.",
+            "image": "/assets/images/camry.jpeg"
         },
         {
             "category": "Sedan",
@@ -34,7 +36,8 @@
             "fuelType": "cng",
             "seats": "5",
             "pricePerDay": "180",
-            "description": "The 2017 Volkswagen Golf is a good choice in the compact car class. It features fun handling dynamics, and its standard and available engines provide plenty of power for everyday driving. The Golf also boasts a refined cabin and one of the largest cargo areas in the class."
+            "description": "The 2017 Volkswagen Golf is a good choice in the compact car class. It features fun handling dynamics, and its standard and available engines provide plenty of power for everyday driving. The Golf also boasts a refined cabin and one of the largest cargo areas in the class.",
+            "image": "/assets/images/golf.jpeg"
         },
         {
             "category": "Sedan",
@@ -46,7 +49,8 @@
             "fuelType": "petrol",
             "seats": "5",
             "pricePerDay": "220",
-            "description": "The Honda Civic ranks in the top third of the highly competitive compact car class. The Civic has excellent driving dynamics, refined engines, great safety scores, and an interior that is both upscale and roomy."
+            "description": "The Honda Civic ranks in the top third of the highly competitive compact car class. The Civic has excellent driving dynamics, refined engines, great safety scores, and an interior that is both upscale and roomy.",
+            "image": "/assets/images/civic.jpeg"
         },
         {
             "category": "SUVs",
@@ -58,7 +62,8 @@
             "fuelType": "petrol",
             "seats": "4",
             "pricePerDay": "310",
-            "description": "Jimny is the spiritual successor to the mite-size Sierra. The little two-door comes with driver and passenger airbags, air-conditioning, radio/CD audio and central locking."
+            "description": "Jimny is the spiritual successor to the mite-size Sierra. The little two-door comes with driver and passenger airbags, air-conditioning, radio/CD audio and central locking.",
+            "image": "/assets/images/jimny.jpeg"
         },
         {
             "category": "Sedan",
@@ -70,7 +75,8 @@
             "fuelType": "hybrid",
             "seats": "5",
             "pricePerDay": "250",
-            "description": "The 2017 Sonata Hybrid is a good midsize car and a good choice in the hybrid and electric car class. This well-rounded sedan offers a smooth ride, plenty of standard features, and a good predicted reliability rating. It also has more cargo space than most other hybrid sedans. The Sonata Hybrid is a fine daily driver, but its regenerative brakes feel somewhat grabby, and it can’t match the fuel economy of most rivals."
+            "description": "The 2017 Sonata Hybrid is a good midsize car and a good choice in the hybrid and electric car class. This well-rounded sedan offers a smooth ride, plenty of standard features, and a good predicted reliability rating. It also has more cargo space than most other hybrid sedans. The Sonata Hybrid is a fine daily driver, but its regenerative brakes feel somewhat grabby, and it can’t match the fuel economy of most rivals.",
+            "image": "/assets/images/sonata.jpeg"
         },
         {
             "category": "SUVs",
@@ -82,19 +88,21 @@
             "fuelType": "diesel",
             "seats": "7",
             "pricePerDay": "280",
-            "description": "The 2018 Mercedes-Benz GLC-class comes with a taller roof, more cargo space, easier accommodations, and the same high-end polish that graces the C-Class’s road manners and its lovely cockpit."
+            "description": "The 2018 Mercedes-Benz GLC-class comes with a taller roof, more cargo space, easier accommodations, and the same high-end polish that graces the C-Class’s road manners and its lovely cockpit.",
+            "image": "/assets/images/glc.jpeg"
         },
         {
             "category": "SUVs",
             "availability": "false",
             "brand": "Jeep",
-            "model": "Cheerokee",
+            "model": "Cherokee",
             "modelYear": "2021",
             "mileage": "38234",
             "fuelType": "regular unleaded",
             "seats": "5",
             "pricePerDay": "310",
-            "description": "The 2021 Jeep Grand Cherokee is a fine midsize SUV. It sports an upscale interior with comfy seats, an easy-to-use infotainment system, and decent space for adults in both rows. The Grand Cherokee’s standard V6 engine has more than enough power for everyday driving, and if you want more muscle a trio of brawny V8 engines are available. The Grand Cherokee’s greatest strength is its versatility."
+            "description": "The 2021 Jeep Grand Cherokee is a fine midsize SUV. It sports an upscale interior with comfy seats, an easy-to-use infotainment system, and decent space for adults in both rows. The Grand Cherokee’s standard V6 engine has more than enough power for everyday driving, and if you want more muscle a trio of brawny V8 engines are available. The Grand Cherokee’s greatest strength is its versatility.",
+            "image": "/assets/images/cherokee.jpeg"
         },
         {
             "category": "Sedan",
@@ -106,7 +114,8 @@
             "fuelType": "petrol",
             "seats": "5",
             "pricePerDay": "320",
-            "description": "The 2020 BMW 3 Series is a great car. Performance highlights include lively engines and responsive handling. This sports sedan is not only fun to drive, but it also won't leave you feeling beat up after a full day on the road, thanks to its well-balanced suspension system."
+            "description": "The 2020 BMW 3 Series is a great car. Performance highlights include lively engines and responsive handling. This sports sedan is not only fun to drive, but it also won't leave you feeling beat up after a full day on the road, thanks to its well-balanced suspension system.",
+            "image": "/assets/images/320i.jpeg"
         },
         {
             "category": "SUVs",
@@ -118,7 +127,8 @@
             "fuelType": "Diesel",
             "seats": "7",
             "pricePerDay": "190",
-            "description": "Holden's Captiva has effective turbo-diesel and V6 petrol engines, a high level of standard equipment, and smartphone integration via Apple CarPlay and Android Auto."
+            "description": "Holden's Captiva has effective turbo-diesel and V6 petrol engines, a high level of standard equipment, and smartphone integration via Apple CarPlay and Android Auto.",
+            "image": "/assets/images/captiva.jpeg"
         }
     ]
 }
