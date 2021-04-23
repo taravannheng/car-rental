@@ -571,3 +571,23 @@ span {
 .header__title {
   color: white;
 }
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 120px;
+  padding: 50px 200px;
+}
+
+.main__card {
+  margin-bottom: 40px;
+}

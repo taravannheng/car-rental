@@ -1,0 +1,17 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 120px;
+    padding: 50px 200px;
+
+
+    // border: 1px solid red;
+
+    //          COMPONENTS          //
+
+    &__card {
+        margin-bottom: 40px;
+    }
+}
