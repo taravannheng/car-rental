@@ -1,0 +1,16 @@
+.counter {
+    @include flex-center-row;
+    width: clamp(25px, 25px, 25px);
+    height: clamp(25px, 25px, 25px);
+    margin-left: 5px;
+
+    background-color: setColor(light-color);
+    border-radius: 12.5px;
+
+    //          COMPONENTS          //
+
+    &__text {
+        font-weight: setFontWeight(medium-weight);
+        font-size: setFontSize(s-x2-size);
+    }
+}

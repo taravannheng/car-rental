@@ -460,6 +460,15 @@ span {
   border-radius: 5px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .card__img {
@@ -545,6 +554,32 @@ span {
 .logo--large {
   width: clamp(392.68px, 392.68px, 392.68px);
   height: clamp(392.68px, 392.68px, 392.68px);
+}
+
+.counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: clamp(25px, 25px, 25px);
+  height: clamp(25px, 25px, 25px);
+  margin-left: 5px;
+  background-color: white;
+  border-radius: 12.5px;
+}
+
+.counter__text {
+  font-weight: 500;
+  font-size: 12.94px;
 }
 
 .header {
