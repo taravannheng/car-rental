@@ -395,7 +395,7 @@ span {
 }
 
 .title__text--dark {
-  color: #43424e;
+  color: #2a272a;
 }
 
 .title__text--light {
@@ -563,7 +563,7 @@ span {
   height: clamp(120px, 120px, 120px);
   padding: 0 40px;
   overflow: hidden;
-  background-color: #43424e;
+  background-color: #2a272a;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
