@@ -11,7 +11,7 @@ function createCarEl(car) {
                         <li class="card__details-labels-availability">Availability: </li>
                     </ul>
                     <ul class="card__details-texts">
-                        <li class="card__details-texts-mileage">${car.mileage} kms</li>
+                        <li class="card__details-texts-mileage">${Number(car.mileage).toLocaleString()} kms</li>
                         <li class="card__details-texts-fuel-type">${car.fuelType}</li>
                         <li class="card__details-texts-seat">${car.seats}</li>
                         <li class="card__details-texts-price-per-day">$${car.pricePerDay}</li>
