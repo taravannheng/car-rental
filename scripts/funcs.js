@@ -147,3 +147,9 @@ function updateSelectedCar(el) {
         addSelectedCar(carID);
     }
 }
+
+//  ||  UPDATE SELECTED CAR SESSION
+
+function updateSelectedCarSession() {
+    sessionStorage.setItem('selectedCars', JSON.stringify(selectedCars));
+}
