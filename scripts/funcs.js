@@ -61,3 +61,26 @@ function loadCars() {
     xhr.open('GET', '/json/cars.json', true);
     xhr.send();
 }
+
+function getButtonEl(el) {
+    return el.hasClass('card__button') ? el : el.parent();
+}
+
+function isNotAvailableButton(el) {
+    const button = getButtonEl(el);
+    let status = false;
+
+    button.hasClass('card__button--unavailable') ? status = true : status = false;
+
+    return status;
+}
+
+function toggleButtonColor(el) {
+    const buttonEl = getButtonEl(el);
+
+    if (buttonEl.hasClass('card__button--added')) {
+        buttonEl.removeClass('card__button--added');
+    } else {
+        buttonEl.addClass('card__button--added');
+    }
+}
