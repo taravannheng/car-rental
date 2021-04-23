@@ -4,10 +4,10 @@
 @import 'abstracts/mixins';
 
 // import base
-@import 'base/normalize';
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/preload';
+@import 'bases/normalize';
+@import 'bases/reset';
+@import 'bases/typography';
+@import 'bases/preload';
 
 // import components
 @import 'components/titles';
@@ -16,6 +16,7 @@
 @import 'components/logo';
 
 // import layout
+@import 'layouts/header';
 
 
 // import pages

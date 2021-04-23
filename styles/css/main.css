@@ -529,12 +529,11 @@ span {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  /*          MODIFIERs            */
 }
 
 .logo--small {
-  width: clamp(150px, 150px, 150px);
-  height: clamp(150px, 150px, 150px);
+  width: clamp(160px, 160px, 160px);
+  height: clamp(160px, 160px, 160px);
 }
 
 .logo--medium {
@@ -545,4 +544,30 @@ span {
 .logo--large {
   width: clamp(392.68px, 392.68px, 392.68px);
   height: clamp(392.68px, 392.68px, 392.68px);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: clamp(100%, 100%, 100%);
+  height: clamp(120px, 120px, 120px);
+  padding: 0 40px;
+  overflow: hidden;
+  background-color: #43424e;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header__title {
+  color: white;
 }
