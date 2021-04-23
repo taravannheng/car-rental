@@ -1,0 +1,2 @@
+let cars;
+let selectedCars = [];

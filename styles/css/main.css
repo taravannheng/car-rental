@@ -526,11 +526,27 @@ span {
 }
 
 .card__button {
-  min-width: 125px;
-  width: 125px;
-  max-width: 125px;
+  min-width: 130px;
+  width: 130px;
+  max-width: 130px;
   margin-left: 10px;
   margin-bottom: 10px;
+}
+
+.card__button--unavailable {
+  background-color: #fc0048;
+}
+
+.card__button--unavailable:hover {
+  background-color: #d90030;
+}
+
+.card__button--added {
+  background-color: #00e0d7;
+}
+
+.card__button--added:hover {
+  background-color: #00b2ab;
 }
 
 .logo {

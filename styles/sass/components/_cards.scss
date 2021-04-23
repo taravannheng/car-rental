@@ -78,10 +78,32 @@
     }
 
     &__button {
-        min-width: 125px;
-        width: 125px;
-        max-width: 125px;
+        min-width: 130px;
+        width: 130px;
+        max-width: 130px;
         margin-left: 10px;
         margin-bottom: 10px;
+
+        //          MODIFIERS           //
+        &--unavailable {
+            background-color: setColor(light-red-color);
+
+            //          PSEUDO CLASSES          //
+
+            &:hover {
+                background-color: setColor(dark-red-color);
+            }
+        }
+
+
+        &--added {
+            background-color: setColor(light-green-color);
+
+            //          PSEUDO CLASSES          //
+
+            &:hover {
+                background-color: setColor(dark-green-color);
+            }
+        }
     }
 }
