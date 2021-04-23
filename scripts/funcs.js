@@ -28,7 +28,9 @@ function createCarEl(car) {
         </div>
     `);
 
+    //button element
     let cardButtonEl;
+    const selectedCarSession = JSON.parse(sessionStorage.getItem('selectedCars'));
 
     if (car.availability === 'false') {
         cardButtonEl = $(`<button type="button" class="card__button card__button--unavailable button"><span class="button__text">Not Available</span></button>`);
@@ -36,6 +38,15 @@ function createCarEl(car) {
         cardButtonEl = $(`<button type="button" class="card__button button"><span class="button__text">Add to Cart</span></button>`);
     }
 
+    if (selectedCarSession) {
+        $.each(selectedCars, function(index, selectedCar) {
+            if (car.id === selectedCar) {
+                cardButtonEl = $(`<button type="button" class="card__button card__button--added button"><span class="button__text">Added to Cart</span></button>`);
+            }
+        });
+    }
+
+    //add elements to card
     cardEl.append(cardImgEl);
     cardEl.append(cardTitleEl);
     cardEl.append(cardDetailsEl);
@@ -67,8 +78,6 @@ function loadContents() {
     const selectedCarSession = JSON.parse(sessionStorage.getItem('selectedCars'));
 
     if (selectedCarSession) {
-        selectedCars = selectedCarSession;
-
         updateReservationCounter();
     }
 }
