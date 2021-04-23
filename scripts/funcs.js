@@ -45,7 +45,7 @@ function createCarEl(car) {
     return cardEl;
 }
 
-function loadCars() {
+function loadContents() {
     const xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
@@ -62,6 +62,15 @@ function loadCars() {
 
     xhr.open('GET', '/json/cars.json', true);
     xhr.send();
+
+    //session
+    const selectedCarSession = JSON.parse(sessionStorage.getItem('selectedCars'));
+
+    if (selectedCarSession) {
+        selectedCars = selectedCarSession;
+
+        updateReservationCounter();
+    }
 }
 
 /*          ADD TO CART BUTTON FUNCTIONALITY          */

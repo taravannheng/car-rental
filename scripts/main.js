@@ -1,5 +1,5 @@
 $(function() {
-    loadCars();
+    loadContents();
 
     $('.main').on('click', function(e) {
 
