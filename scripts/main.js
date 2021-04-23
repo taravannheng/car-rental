@@ -13,6 +13,7 @@ $(function() {
                 toggleButtonText(targetEl, 'Add to Cart', 'Added to Cart');
                 updateSelectedCar(targetEl);
                 updateSelectedCarSession();
+                updateReservationCounter();
             }
         }
     });

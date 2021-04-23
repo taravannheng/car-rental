@@ -153,3 +153,12 @@ function updateSelectedCar(el) {
 function updateSelectedCarSession() {
     sessionStorage.setItem('selectedCars', JSON.stringify(selectedCars));
 }
+
+/*          RESERVATION COUNTER FUNCTIONALITY          */
+
+function updateReservationCounter() {
+    const counterText = $('.counter__text');
+    const numberOfReservations = selectedCars.length;
+
+    counterText.text(numberOfReservations);
+}
