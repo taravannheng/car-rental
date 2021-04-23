@@ -10,6 +10,7 @@ $(function() {
         if (targetEl.hasClass('card__button') || targetEl.parent().hasClass('card__button')) {
             if (!isNotAvailableButton(targetEl)) {   
                 toggleButtonColor(targetEl);
+                toggleButtonText(targetEl, 'Add to Cart', 'Added to Cart');
             }
         }
     });

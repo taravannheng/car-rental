@@ -1,3 +1,5 @@
+/*          LOAD CAR FUNCTIONALITY          */
+
 function createCarEl(car) {
     const cardEl = $(`<div class="main__card card" id="${car.id}"></div>`);
     const cardImgEl = $(`<div class="card__img" style="background-image: url(${car.image})"></div>`);
@@ -62,8 +64,16 @@ function loadCars() {
     xhr.send();
 }
 
+/*          ADD TO CART BUTTON FUNCTIONALITY          */
+
+// ||   GENERAL
+
 function getButtonEl(el) {
     return el.hasClass('card__button') ? el : el.parent();
+}
+
+function getButtonTextEl(el) {
+    return el.hasClass('card__button') ? el.children('.button__text') : el;
 }
 
 function isNotAvailableButton(el) {
@@ -75,6 +85,8 @@ function isNotAvailableButton(el) {
     return status;
 }
 
+//  ||  TOGGLE BUTTON COLOR 
+
 function toggleButtonColor(el) {
     const buttonEl = getButtonEl(el);
 
@@ -82,5 +94,17 @@ function toggleButtonColor(el) {
         buttonEl.removeClass('card__button--added');
     } else {
         buttonEl.addClass('card__button--added');
+    }
+}
+
+//  ||  TOGGLE BUTTON TEXT
+
+function toggleButtonText(el, firstText, secondText) {
+    const buttonTextEl = getButtonTextEl(el);
+
+    if (buttonTextEl.text() === firstText) {
+        buttonTextEl.text(secondText);
+    } else {
+        buttonTextEl.text(firstText);
     }
 }
