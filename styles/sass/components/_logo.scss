@@ -1,0 +1,23 @@
+.logo {
+    background-image: url(/assets/logo/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    /*          MODIFIERs            */
+
+    &--small {
+        width: clamp(150px, 150px, 150px);
+        height: clamp(150px, 150px, 150px);
+    }
+
+    &--medium {
+        width: clamp(242.70px, 242.70px, 242.70px);
+        height: clamp(242.70px, 242.70px, 242.70px);
+    }
+
+    &--large {
+        width: clamp(392.68px, 392.68px, 392.68px);
+        height: clamp(392.68px, 392.68px, 392.68px);
+    }
+}

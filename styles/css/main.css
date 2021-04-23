@@ -519,3 +519,26 @@ span {
   margin-left: 10px;
   margin-bottom: 10px;
 }
+
+.logo {
+  background-image: url(/assets/logo/logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  /*          MODIFIERs            */
+}
+
+.logo--small {
+  width: clamp(150px, 150px, 150px);
+  height: clamp(150px, 150px, 150px);
+}
+
+.logo--medium {
+  width: clamp(242.7px, 242.7px, 242.7px);
+  height: clamp(242.7px, 242.7px, 242.7px);
+}
+
+.logo--large {
+  width: clamp(392.68px, 392.68px, 392.68px);
+  height: clamp(392.68px, 392.68px, 392.68px);
+}
