@@ -85,6 +85,32 @@ function isNotAvailableButton(el) {
     return status;
 }
 
+function getCarID(el) {
+    return el.parentsUntil('.main', '.card').attr('id');
+}
+
+function isSelected(carID) {
+    let selectedStatus = false;
+
+    $.each(selectedCars, function(index, selectedCar) {
+        if (selectedCar === carID) {
+            selectedStatus = true;
+        }
+    });
+
+    return selectedStatus;
+}
+
+function removeSelectedCar(carID) {
+    const index = selectedCars.indexOf(carID);
+
+    selectedCars.splice(index, 1);
+}
+
+function addSelectedCar(carID) {
+    selectedCars.push(carID);
+}
+
 //  ||  TOGGLE BUTTON COLOR 
 
 function toggleButtonColor(el) {
@@ -106,5 +132,18 @@ function toggleButtonText(el, firstText, secondText) {
         buttonTextEl.text(secondText);
     } else {
         buttonTextEl.text(firstText);
+    }
+}
+
+//  ||  UPDATE SELECTED CAR
+
+function updateSelectedCar(el) {
+    const carID = getCarID(el);
+    const selectedStatus = isSelected(carID);
+
+    if (selectedStatus) {
+        removeSelectedCar(carID);
+    } else {
+        addSelectedCar(carID);
     }
 }

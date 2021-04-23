@@ -11,6 +11,7 @@ $(function() {
             if (!isNotAvailableButton(targetEl)) {   
                 toggleButtonColor(targetEl);
                 toggleButtonText(targetEl, 'Add to Cart', 'Added to Cart');
+                updateSelectedCar(targetEl);
             }
         }
     });
