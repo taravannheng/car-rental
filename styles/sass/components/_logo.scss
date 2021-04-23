@@ -4,11 +4,11 @@
     background-size: contain;
     background-position: center;
 
-    /*          MODIFIERs            */
+    //          MODIFIERS            //
 
     &--small {
-        width: clamp(150px, 150px, 150px);
-        height: clamp(150px, 150px, 150px);
+        width: clamp(160px, 160px, 160px);
+        height: clamp(160px, 160px, 160px);
     }
 
     &--medium {
