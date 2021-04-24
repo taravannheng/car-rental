@@ -9,7 +9,9 @@ $(function() {
     $('.header__cart').on('click', function(e) {
         const targetEl = $(e.target);
 
-        swapPage('index', 'reservation');
+        if (selectedCars.length === 0) {
+            e.preventDefault();   
+        }
     });
 
     /*                  ADD TO CART BUTTON                 */
