@@ -7,6 +7,7 @@ function createCarEl(car) {
     const cardDetailsEl = $(`
         <div class="card__details">
             <ul class="card__details-labels">
+                <li class="card__details-labels-category">Category: </li>
                 <li class="card__details-labels-mileage">Mileage: </li>
                 <li class="card__details-labels-fuel-type">Fuel Type: </li>
                 <li class="card__details-labels-seat">Seats: </li>
@@ -14,6 +15,7 @@ function createCarEl(car) {
                 <li class="card__details-labels-availability">Availability: </li>
             </ul>
             <ul class="card__details-texts">
+                <li class="card__details-texts-category">${car.category}</li>
                 <li class="card__details-texts-mileage">${Number(car.mileage).toLocaleString()} kms</li>
                 <li class="card__details-texts-fuel-type">${car.fuelType}</li>
                 <li class="card__details-texts-seat">${car.seats}</li>

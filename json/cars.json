@@ -2,7 +2,7 @@
     "cars": [
         {
             "id": "c-1",
-            "category": "SUVs",
+            "category": "SUV",
             "availability": "true",
             "brand": "Nissan",
             "model": "X-trail",
@@ -30,7 +30,7 @@
         },
         {
             "id": "c-3",
-            "category": "Sedan",
+            "category": "Wagon",
             "availability": "true",
             "brand": "Volkswagen",
             "model": "Golf",
@@ -58,7 +58,7 @@
         },
         {
             "id": "c-5",
-            "category": "SUVs",
+            "category": "SUV",
             "availability": "true",
             "brand": "Suzuki",
             "model": "Jimny",
@@ -86,7 +86,7 @@
         },
         {
             "id": "c-7",
-            "category": "SUVs",
+            "category": "Wagon",
             "availability": "true",
             "brand": "Mercedes-Benz",
             "model": "GLC",
@@ -100,7 +100,7 @@
         },
         {
             "id": "c-8",
-            "category": "SUVs",
+            "category": "SUV",
             "availability": "false",
             "brand": "Jeep",
             "model": "Cherokee",
@@ -128,7 +128,7 @@
         },
         {
             "id": "c-10",
-            "category": "SUVs",
+            "category": "SUV",
             "availability": "false",
             "brand": "GM",
             "model": "Captiva",
