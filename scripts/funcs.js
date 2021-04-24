@@ -3,7 +3,7 @@
 function createCarEl(car) {
     const cardEl = $(`<div class="main__card card" id="${car.id}"></div>`);
     const cardImgEl = $(`<div class="card__img" style="background-image: url(${car.image})"></div>`);
-    const cardTitleEl = $(`<h2 class="card__title"><span class="card__title-brand">${car.brand}</span> <span class="card__title-model">${car.model}</span> <span class="card__title-model-year">${car.modelYear}</span></h2>`);
+    const cardTitleEl = $(`<h2 class="card__title title"><span class="card__title-brand title__text title__text--dark title__text--md-x1 title__text--bold-weight">${car.brand}</span> <span class="card__title-model  title__text title__text--dark title__text--md-x1 title__text--bold-weight">${car.model}</span> <span class="card__title-model-year  title__text title__text--dark title__text--md-x1 title__text--bold-weight">${car.modelYear}</span></h2>`);
     const cardDetailsEl = $(`
         <div class="card__details">
             <ul class="card__details-labels">

@@ -392,18 +392,68 @@ span {
   display: none;
 }
 
-.title__text {
-  font-weight: 900;
-  font-size: 41.88px;
-  line-height: 47.11px;
-}
-
 .title__text--dark {
   color: #2a272a;
 }
 
 .title__text--light {
   color: white;
+}
+
+.title__text--l-x2 {
+  font-size: 41.88px;
+}
+
+.title__text--l-x1 {
+  font-size: 33.88px;
+}
+
+.title__text--md-x2 {
+  font-size: 25.88px;
+}
+
+.title__text--md-x1 {
+  font-size: 20.94px;
+}
+
+.title__text--nm-x2 {
+  font-size: 16px;
+}
+
+.title__text--nm-x1 {
+  font-size: 14.47px;
+}
+
+.title__text--s-x2 {
+  font-size: 12.94px;
+}
+
+.title__text--s-x2 {
+  font-size: 9.88px;
+}
+
+.title__text--black-weight {
+  font-weight: 900;
+}
+
+.title__text--bold-weight {
+  font-weight: 700;
+}
+
+.title__text--medium-weight {
+  font-weight: 500;
+}
+
+.title__text--triple-x1-height {
+  line-height: 42.61px;
+}
+
+.title__text--double-x1-height {
+  line-height: 29.12px;
+}
+
+.title__text--double-x1-height {
+  line-height: 18px;
 }
 
 .button {
@@ -489,11 +539,6 @@ span {
 
 .card__title {
   margin: 0 0 15px 10px;
-}
-
-.card__title span {
-  font-weight: 400;
-  font-size: 20.94px;
 }
 
 .card__details {

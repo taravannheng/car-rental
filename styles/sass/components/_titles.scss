@@ -3,11 +3,10 @@
     //           ELEMENT           //
 
     &__text {
-        font-weight: setFontWeight(black-weight);
-        font-size: setFontSize(l-x2-size);
-        line-height: setLineHeight(triple-x2-height);
 
         //          MODIFIERS           //
+
+        // color
 
         &--dark {
             color: setColor(dark-color);
@@ -15,6 +14,68 @@
 
         &--light {
             color: setColor(light-color);
+        }
+
+        // font size
+
+        &--l-x2 {
+            font-size: setFontSize(l-x2-size);
+        }
+
+        &--l-x1 {
+            font-size: setFontSize(l-x1-size);
+        }
+
+        &--md-x2 {
+            font-size: setFontSize(md-x2-size);
+        }
+
+        &--md-x1 {
+            font-size: setFontSize(md-x1-size);
+        }
+
+        &--nm-x2 {
+            font-size: setFontSize(nm-x2-size);
+        }
+
+        &--nm-x1 {
+            font-size: setFontSize(nm-x1-size);
+        }
+
+        &--s-x2 {
+            font-size: setFontSize(s-x2-size);
+        }
+
+        &--s-x2 {
+            font-size: setFontSize(s-x1-size);
+        }
+
+        // weight
+
+        &--black-weight {
+            font-weight: setFontWeight(black-weight);
+        }
+
+        &--bold-weight {
+            font-weight: setFontWeight(bold-weight);
+        }
+
+        &--medium-weight {
+            font-weight: setFontWeight(medium-weight);
+        }
+
+        // line height
+
+        &--triple-x1-height {
+            line-height: setLineHeight(triple-x1-height);
+        }
+
+        &--double-x1-height {
+            line-height: setLineHeight(double-x1-height);
+        }
+
+        &--double-x1-height {
+            line-height: setLineHeight(mono-x1-height);
         }
     }
 }
