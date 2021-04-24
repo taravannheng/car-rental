@@ -4,6 +4,7 @@
     border: 0;
 
     background-color: setColor(light-blue-color);
+    color: setColor(light-blue-color);
     border-radius: 2px;
     cursor: pointer;
     @include transition-ease(transform);
