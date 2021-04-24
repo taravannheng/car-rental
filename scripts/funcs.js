@@ -182,3 +182,35 @@ function updateReservationCounter() {
 
     counterText.text(numberOfReservations);
 }
+
+/*          RESERVATION PAGE          */
+
+function getCurrentPage() {
+    let currentPage = 'index';
+
+    if (sessionStorage.getItem('currentPage')) {
+        currentPage = sessionStorage.getItem('currentPage');
+    } else {
+        sessionStorage.setItem('currentPage', 'index');
+    }
+
+    return currentPage;
+}
+
+function updateCurrentPageSession(currentPage) {
+    sessionStorage.setItem('currentPage', currentPage);
+}
+
+function swapPage(firstPage, secondPage) {
+    let currentPage = getCurrentPage();
+
+    if (currentPage === firstPage) {
+        currentPage = secondPage;
+        updateCurrentPageSession(secondPage);
+    } else {
+        currentPage = firstPage;
+        updateCurrentPageSession(firstPage);
+    }
+
+    window.location.href = `/${currentPage}.html`;
+}

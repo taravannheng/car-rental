@@ -1,5 +1,18 @@
 $(function() {
+
+    /*                  INITIAL LOADING                 */
+
     loadContents();
+
+    /*                  RESERVATION                 */
+
+    $('.header__cart').on('click', function(e) {
+        const targetEl = $(e.target);
+
+        swapPage('index', 'reservation');
+    });
+
+    /*                  ADD TO CART BUTTON                 */
 
     $('.main').on('click', function(e) {
 
