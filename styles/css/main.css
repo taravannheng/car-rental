@@ -350,6 +350,10 @@ body {
   background-color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -419,6 +423,7 @@ span {
   padding: 5px 20px;
   border: 0;
   background-color: #0071ff;
+  color: #0071ff;
   border-radius: 2px;
   cursor: pointer;
   -webkit-transition: -webkit-transform 0.3s ease;
