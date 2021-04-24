@@ -1,0 +1,20 @@
+.warning {
+    @include flex-center-column;
+    width: clamp(300px, 300px 300px);
+
+    //              ELEMENT              //
+
+    &__illustration {
+        @include flex-center-row;
+
+        //          ELEMENT             //
+
+        & svg {
+            width: 70%;
+        }
+    }
+
+    &__message {
+        font-size: setFontSize(md-x1-size);
+    }
+}
