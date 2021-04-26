@@ -689,6 +689,10 @@ span {
   font-size: 20.94px;
 }
 
+.warning--hide {
+  display: none;
+}
+
 .header {
   position: fixed;
   top: 0;
