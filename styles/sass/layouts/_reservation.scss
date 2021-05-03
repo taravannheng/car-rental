@@ -1,5 +1,11 @@
 .reservation {
-    @include flex-center-row;
+    // @include flex-center-row; 
     margin-top: 120px;
     padding: 50px 200px;
+
+    //          ELEMENTS
+
+    &__title {
+        margin-bottom: 40px;
+    }
 }

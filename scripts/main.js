@@ -9,9 +9,10 @@ $(function() {
     $('.header__cart').on('click', function(e) {
         const targetEl = $(e.target);
 
-        if (selectedCars.length === 0) {
-            e.preventDefault();   
-        }
+        //prevent cart showing if no car selected
+        // if (selectedCars.length === 0) {
+        //     e.preventDefault();   
+        // }
     });
 
     /*                  ADD TO CART BUTTON                 */
