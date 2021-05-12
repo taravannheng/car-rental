@@ -1,12 +1,11 @@
 .header {
-    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: clamp(100%, 100%, 100%);
+    width: clamp(1680px, 1680px, 1680px);
     height: clamp(120px, 120px, 120px);
     padding: 0 40px;
     overflow: hidden;

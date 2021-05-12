@@ -3,6 +3,8 @@
 }
 
 body {
+    width: clamp(1680px, 1680px, 1680px);
+
     background-color: setColor(light-color);
     color: setColor(dark-color);
 }
