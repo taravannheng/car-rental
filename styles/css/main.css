@@ -664,7 +664,6 @@ span {
       -ms-flex-align: center;
           align-items: center;
   width: clamp(300px, 300px 300px);
-  border: 1px solid #000;
 }
 
 .warning__illustration {
@@ -841,7 +840,7 @@ span {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 120px;
+  margin-top: 20px;
   padding: 50px 200px;
 }
 
@@ -851,7 +850,7 @@ span {
 
 .reservation {
   position: relative;
-  margin-top: 120px;
+  margin-top: 20px;
   padding: 50px 200px;
 }
 

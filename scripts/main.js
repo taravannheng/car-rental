@@ -10,9 +10,9 @@ $(function() {
         const targetEl = $(e.target);
 
         //prevent cart showing if no car selected
-        // if (selectedCars.length === 0) {
-        //     e.preventDefault();   
-        // }
+        if (selectedCars.length === 0) {
+            e.preventDefault();   
+        }
     });
 
     /*                  ADD TO CART BUTTON                 */

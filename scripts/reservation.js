@@ -6,7 +6,7 @@ if (sessionStorage.getItem('selectedCars')) {
 
     //                  RESERVATION WARNING
     
-    // if (selectedCarSession.length > 0) {
-    //     $('.reservation__warning').addClass('warning--hide');
-    // }
+    if (selectedCarSession.length > 0) {
+        $('.reservation__warning').addClass('warning--hide');
+    }
 }
