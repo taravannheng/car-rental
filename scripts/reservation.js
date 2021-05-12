@@ -8,5 +8,10 @@ if (sessionStorage.getItem('selectedCars')) {
     
     if (selectedCarSession.length > 0) {
         $('.reservation__warning').addClass('warning--hide');
+    } else {
+        $('.reservation__title').addClass('reservation__title--hide');
+        $('.reservation__labels').addClass('reservation__labels--hide');
+        $('.reservation__list').addClass('reservation__list--hide');
+        $('.reservation__checkout-button').addClass('reservation__checkout-button--hide');
     }
 }
