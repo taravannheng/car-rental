@@ -663,6 +663,7 @@ span {
       -ms-flex-align: center;
           align-items: center;
   width: clamp(300px, 300px 300px);
+  border: 1px solid #000;
 }
 
 .warning__illustration {
@@ -705,6 +706,100 @@ span {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.rental-days-control {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 150px;
+}
+
+.rental-days-control__up-button {
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.rental-days-control__input {
+  width: 70px;
+  height: 25px;
+  border: 1px solid #2a272a;
+  margin: 0 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.rental-days-control__input::-webkit-outer-spin-button, .rental-days-control__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+.rental-days-control__input:focus {
+  outline: 0;
+}
+
+.rental-days-control__down-button {
+  margin-top: -7.5px;
+  cursor: pointer;
+}
+
+.rental-days-control__message {
+  position: absolute;
+  top: 20px;
+  width: 180px;
+  font-size: 12.94px;
+  text-align: center;
+  color: #fc0048;
+}
+
+.reservation-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.reservation-item__thumbnail {
+  width: 200px;
+  height: 100px;
+  margin-left: 30px;
+  margin-right: 50px;
+  background-image: url(/assets/images/x-trail.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.reservation-item__vehicle {
+  width: 200px;
+  text-align: center;
+  margin-right: 110px;
+}
+
+.reservation-item__price-per-day {
+  width: 100px;
+  text-align: center;
+  margin-right: 150px;
+}
+
+.reservation-item__rental-days {
+  margin-right: 135px;
 }
 
 .header {
@@ -755,10 +850,44 @@ span {
 }
 
 .reservation {
+  position: relative;
   margin-top: 120px;
   padding: 50px 200px;
 }
 
 .reservation__title {
   margin-bottom: 40px;
+}
+
+.reservation__title--hide {
+  display: none;
+}
+
+.reservation__labels {
+  margin-bottom: 40px;
+}
+
+.reservation__labels--hide {
+  display: none;
+}
+
+.reservation__list {
+  margin-bottom: 40px;
+}
+
+.reservation__list--hide {
+  display: none;
+}
+
+.reservation__list .reservation-item {
+  margin-bottom: 30px;
+}
+
+.reservation__checkout-button {
+  position: absolute;
+  right: 263px;
+}
+
+.reservation__checkout-button--hide {
+  display: none;
 }

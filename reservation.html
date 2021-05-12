@@ -85,6 +85,25 @@
             <li class="labels__list title"><span class="title__text title__text--dark title__text--sm-x2 title__text--medium-weight">Rental Days</span></li>
             <li class="labels__list title"><span class="title__text title__text--dark title__text--sm-x2 title__text--medium-weight">Action</span></li>
         </ul>
+        <div class="reservation__list">
+            <div class="reservation-item">
+                <div class="reservation-item__thumbnail"></div>
+                <p class="reservation-item__vehicle">2020 Camry</p>
+                <p class="reservation-item__price-per-day">$10.00</p>
+                <div class="reservation-item__rental-days rental-days-control">
+                    <i class="rental-days-control__up-button fas fa-sort-up"></i>
+                    <input type="number" name="rental_days" class="rental-days-control__input" min="1" value="1" max="30">    
+                    <i class="rental-days-control__down-button fas fa-sort-down"></i>
+                    <p class="rental-days-control__message">Rental cannot exceed 30 days!</p>
+                </div>
+                <button type="button" class="reservation-item__delete-button button">
+                    <span class="button__text">Delete</span>
+                </button>
+            </div>
+        </div>
+        <button type="button" class="reservation__checkout-button button">
+            <span class="button__text">Checkout</span>
+        </button>
     </main>
 </body>
 </html>

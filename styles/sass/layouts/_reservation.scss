@@ -1,5 +1,5 @@
 .reservation {
-    // @include flex-center-row; 
+    position: relative; 
     margin-top: 120px;
     padding: 50px 200px;
 
@@ -7,5 +7,48 @@
 
     &__title {
         margin-bottom: 40px;
+
+        //          MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__labels {
+        margin-bottom: 40px;
+
+        //          MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__list {
+        margin-bottom: 40px;
+
+        //          MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+
+        //              ELEMENTS
+
+        & .reservation-item {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__checkout-button {
+        position: absolute;
+        right: 263px;
+
+        //          MODIFIERS
+
+        &--hide {
+            display: none;
+        }
     }
 }

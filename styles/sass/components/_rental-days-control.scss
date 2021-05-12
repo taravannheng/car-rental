@@ -1,0 +1,56 @@
+.rental-days-control {
+    position: relative;
+    @include flex-center-row;
+    flex-wrap: wrap;
+    width: 150px;
+
+    // border: 1px solid #000;
+
+    //                  ELEMENTS
+
+    &__up-button {
+        margin-top: 5px;
+
+        cursor: pointer;
+    }
+
+    &__input {
+        width: 70px;
+        height: 25px;
+        border: 1px solid setColor(dark-color);
+        margin: 0 10px;
+        text-align: center;
+
+        border-radius: 5px;
+
+        // ||           pseudo-elements         //
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            appearance: none;
+            margin: 0;
+        }
+
+        // ||           pseudo-classes          //
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &__down-button {
+        margin-top: -7.5px;
+
+        cursor: pointer;
+    }
+
+    &__message {
+        position: absolute;
+        top: 20px;
+        width: 180px;
+        font-size: setFontSize(s-x2-size);
+        text-align: center;
+
+        color: setColor(light-red-color);
+    }
+}
