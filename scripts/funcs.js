@@ -59,22 +59,15 @@ function createCarEl(car) {
 }
 
 function loadContents() {
-    const xhr = new XMLHttpRequest();
+    $.getJSON('/json/cars.json', function(result) {
+        cars = result.cars;
 
-    xhr.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            cars = JSON.parse(this.responseText).cars;
+        $.each(cars, function(index, car) {
+            const carEl = createCarEl(car);
 
-            $.each(cars, function(index, car) {
-                const carEl = createCarEl(car);
-
-                $('.main').append(carEl);
-            });
-        }
-    }
-
-    xhr.open('GET', '/json/cars.json', true);
-    xhr.send();
+            $('.main').append(carEl);
+        });
+    });
 
     //session
     const selectedCarSession = JSON.parse(sessionStorage.getItem('selectedCars'));
