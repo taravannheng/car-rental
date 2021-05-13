@@ -55,14 +55,17 @@
                 <span class="title__text title__text--dark title__text--nm-x2 title__text--medium-weight">Customer Details</span>
             </h2>
             <div class="form__input-control input-control">
+                <p class="input-control__error-message">First Name is required!</p>
                 <label for="first-name" class="input-control__label">First Name<span class="important-symbol">*</span>:</label>
                 <input type="text" class="input-control__input" id="first-name">
             </div>
             <div class="form__input-control input-control">
+                <p class="input-control__error-message">Last Name is required!</p>
                 <label for="last-name" class="input-control__label">Last Name<span class="important-symbol">*</span>:</label>
                 <input type="text" class="input-control__input" id="last-name">
             </div>
             <div class="form__input-control input-control">
+                <p class="input-control__error-message">Email is required!</p>
                 <label for="email" class="input-control__label">Email<span class="important-symbol">*</span>:</label>
                 <input type="text" class="input-control__input" id="email">
             </div>
@@ -70,14 +73,17 @@
                 <span class="title__text title__text--dark title__text--nm-x2 title__text--medium-weight">Address</span>
             </h2>
             <div class="form__input-control input-control">
+                <p class="input-control__error-message">Address 1 is required!</p>
                 <label for="first-address" class="input-control__label">Address 1<span class="important-symbol">*</span>:</label>
                 <input type="text" class="input-control__input" id="first-address">
             </div>
             <div class="form__input-control input-control">
+                <p class="input-control__error-message">Address 2 is required!</p>
                 <label for="second-address" class="input-control__label">Address 2:</label>
                 <input type="text" class="input-control__input" id="second-address">
             </div>
             <div class="form__input-control input-control">
+                <p class="input-control__error-message">City is required!</p>
                 <label for="city" class="input-control__label">City<span class="important-symbol">*</span>:</label>
                 <input type="text" class="input-control__input" id="city">
             </div>
@@ -93,6 +99,7 @@
                 </select>
             </div>
             <div class="form__input-control input-control">
+                <p class="input-control__error-message">Postal Code is required!</p>
                 <label for="postal-code" class="input-control__label">Postal Code<span class="important-symbol">*</span>:</label>
                 <input type="text" class="input-control__input" id="postal-code">
             </div>
@@ -108,10 +115,10 @@
                     <option value="visa">Visa</option>
                 </select>
             </div>
-            <a href="/index.html" class="button">
+            <a href="/index.html" class="form__continue-selection-button button">
                 <span class="button__text">Continue Selection</span>
             </a>
-            <button type="Book" class="button"><span class="button__text">Book</span></button>
+            <button type="Book" class="form__book-button button"><span class="button__text">Book</span></button>
         </form>
 
         <div class="checkout__reservation-details reservation-details">

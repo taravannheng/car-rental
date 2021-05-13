@@ -1,0 +1,49 @@
+.input-control {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    // overflow-x: hidden;
+
+    //          ELEMENTS
+
+    &__label {
+        font-size: setFontSize(nm-x1-size);
+    }
+
+    &__input, &__select {
+        width: 225px;
+        padding: 5px 5px;
+        border: 1px solid #000;
+        font-size: setFontSize(nm-x1-size);
+
+        //          PSEUDO-CLASSES
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+    &__error-message {
+        // position: absolute;
+        // right: 0px;
+        display: none;
+        width: 100%;
+        padding-right: 5px;
+        font-size: setFontSize(s-x2-size);
+        margin: 0;
+        text-align: right;
+
+        color: setColor(light-red-color);
+        // transform: translateY(100%);
+        transition: transform 0.3s ease;
+
+        //          MODIFIERS
+
+        &--show {
+            display: block;
+            // transform: translateX(-1%);
+        }
+    }
+}

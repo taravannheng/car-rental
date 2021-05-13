@@ -4,13 +4,13 @@
     position: relative;
     padding: 50px 200px;
 
-    border: 1px solid #000;
+    // border: 1px solid #000;
 
     //          ELEMENTS
 
     &__warning {
         width: 100%;
-        border: 1px solid #000;
+        // border: 1px solid #000;
 
         //      MODIFIERS
 
@@ -21,7 +21,7 @@
 
     &__title {
         width: 100%;
-        border: 1px solid #000;
+        // border: 1px solid #000;
 
         //      MODIFIERS
 
@@ -31,8 +31,8 @@
     }
 
     &__form {
-        width: 500px; // need update
-        border: 1px solid #000;
+        width: 350px;
+        // border: 1px solid #000;
 
         //      MODIFIERS
 
@@ -44,7 +44,7 @@
     &__reservation-details {
         width: 300px; // need update
         height: 100px; // need to remove
-        border: 1px solid #000;
+        // border: 1px solid #000;
 
         //      MODIFIERS
 

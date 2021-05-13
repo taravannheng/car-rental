@@ -808,7 +808,56 @@ span {
 }
 
 .message {
+  margin: 0;
   font-size: 12.94px;
+}
+
+.input-control {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-control__label {
+  font-size: 14.47px;
+}
+
+.input-control__input, .input-control__select {
+  width: 225px;
+  padding: 5px 5px;
+  border: 1px solid #000;
+  font-size: 14.47px;
+}
+
+.input-control__input:focus, .input-control__select:focus {
+  outline: 0;
+}
+
+.input-control__error-message {
+  display: none;
+  width: 100%;
+  padding-right: 5px;
+  font-size: 12.94px;
+  margin: 0;
+  text-align: right;
+  color: #fc0048;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.input-control__error-message--show {
+  display: block;
 }
 
 .header {
@@ -907,12 +956,10 @@ span {
       flex-wrap: wrap;
   position: relative;
   padding: 50px 200px;
-  border: 1px solid #000;
 }
 
 .checkout__warning {
   width: 100%;
-  border: 1px solid #000;
 }
 
 .checkout__warning--hide {
@@ -921,7 +968,6 @@ span {
 
 .checkout__title {
   width: 100%;
-  border: 1px solid #000;
 }
 
 .checkout__title--hide {
@@ -929,8 +975,7 @@ span {
 }
 
 .checkout__form {
-  width: 500px;
-  border: 1px solid #000;
+  width: 350px;
 }
 
 .checkout__form--hide {
@@ -940,7 +985,6 @@ span {
 .checkout__reservation-details {
   width: 300px;
   height: 100px;
-  border: 1px solid #000;
 }
 
 .checkout__reservation-details--hide {
@@ -949,7 +993,6 @@ span {
 
 .form__important {
   margin: 0;
-  border: 1px solid #000;
 }
 
 .form__title {
@@ -961,5 +1004,23 @@ span {
           align-items: center;
   padding: 10px 0;
   margin: 0 0 10px 0;
-  border: 1px solid #000;
+}
+
+.form__title:not(:first-of-type) {
+  margin-top: 20px;
+}
+
+.form__input-control {
+  margin-bottom: 10px;
+}
+
+.form__continue-selection-button {
+  display: inline-block;
+  width: 170px;
+  margin-top: 25px;
+  margin-right: 10px;
+}
+
+.form__book-button {
+  display: inline-block;
 }

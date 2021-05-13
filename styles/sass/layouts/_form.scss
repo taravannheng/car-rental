@@ -4,7 +4,7 @@
 
     &__important {
         margin: 0;
-        border: 1px solid #000;
+        // border: 1px solid #000;
     }
 
     &__title {
@@ -12,6 +12,27 @@
         align-items: center;
         padding: 10px 0;
         margin: 0 0 10px 0;
-        border: 1px solid #000;
+        // border: 1px solid #000;
+
+        //          PSEUDO-CLASSES
+
+        &:not(:first-of-type) {
+            margin-top: 20px;
+        }
+    }
+
+    &__input-control {
+        margin-bottom: 10px;
+    }
+
+    &__continue-selection-button {
+        display: inline-block;
+        width: 170px;
+        margin-top: 25px;
+        margin-right: 10px;
+    }
+
+    &__book-button {
+        display: inline-block;
     }
 }
