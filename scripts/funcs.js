@@ -42,7 +42,7 @@ function createCarEl(car) {
 
     if (selectedCarSession) {
         $.each(selectedCars, function(index, selectedCar) {
-            if (car.id === selectedCar) {
+            if (car.id === selectedCar.id) {
                 cardButtonEl = $(`<button type="button" class="card__button card__button--added button"><span class="button__text">Added to Cart</span></button>`);
             }
         });
@@ -106,7 +106,7 @@ function isSelected(carID) {
     let selectedStatus = false;
 
     $.each(selectedCars, function(index, selectedCar) {
-        if (selectedCar === carID) {
+        if (selectedCar.id === carID) {
             selectedStatus = true;
         }
     });
@@ -115,13 +115,20 @@ function isSelected(carID) {
 }
 
 function removeSelectedCar(carID) {
-    const index = selectedCars.indexOf(carID);
-
-    selectedCars.splice(index, 1);
+    $.each(selectedCars, function(index, selectedCar) {
+        if (carID === selectedCar.id) {
+            selectedCars.splice(index, 1);
+        }
+    });
 }
 
 function addSelectedCar(carID) {
-    selectedCars.push(carID);
+    const car = {
+        id: carID,
+        quantity: 1
+    }
+
+    selectedCars.push(car);
 }
 
 //  ||  TOGGLE BUTTON COLOR 
@@ -179,13 +186,13 @@ function updateReservationCounter() {
 /*          RESERVATION LIST FUNCTIONALITY          */
 
 function createReservationItem(selectedCar) {
-    let reservationItemEl = $(`<div class="reservation-item" id="${selectedCar}"></div>`);
+    let reservationItemEl = $(`<div class="reservation-item" id="${selectedCar.id}"></div>`);
 
     $.getJSON('/json/cars.json', function(result) {
         let cars = result.cars;
 
         $.each(cars, function(index, car) {
-            if (car.id === selectedCar) {
+            if (car.id === selectedCar.id) {
                 const thumbnailEl = $(`<div class="reservation-item__thumbnail" style="background-image: url(${car.image})"></div>`);
                 const vehicleEl = $(`<p class="reservation-item__vehicle">${car.brand} ${car.model} ${car.modelYear}</p>`);
                 const pricePerDayEl = $(`<p class="reservation-item__price-per-day">$${car.pricePerDay}</p>`);
