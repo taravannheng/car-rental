@@ -1,0 +1,58 @@
+.reservation-details {
+    position: relative;
+    width: 600px;
+
+    // border: 1px solid #000;
+
+    //          ELEMENTS
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 10px;  
+        margin-bottom: 20px;
+
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        // border: 1px solid #000;
+
+        //          PSEUDO-CLASSES
+
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+
+    &__thumbnail {
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+        margin-right: 50px;
+
+        // border: 1px solid #000;
+
+        background-image: url(/assets/images/x-trail.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    &__info {
+        display: inline-block;
+        // border: 1px solid #000;
+
+        //          CHILDREN
+
+        & > p {
+            margin: 3px;
+            font-size: setFontSize(nm-x1-size);
+        }
+    }
+
+    &__total {
+        position: absolute;
+        right: 0;
+        width: 335px;
+        // border: 1px solid #000;
+    }
+}

@@ -860,6 +860,12 @@ span {
   display: block;
 }
 
+.total {
+  width: 100%;
+  font-size: 14.47px;
+  font-weight: 700;
+}
+
 .header {
   top: 0;
   left: 0;
@@ -975,20 +981,19 @@ span {
 }
 
 .checkout__form {
-  width: 350px;
+  margin-right: 100px;
 }
 
 .checkout__form--hide {
   display: none;
 }
 
-.checkout__reservation-details {
-  width: 300px;
-  height: 100px;
-}
-
 .checkout__reservation-details--hide {
   display: none;
+}
+
+.form {
+  width: 350px;
 }
 
 .form__important {
@@ -1023,4 +1028,57 @@ span {
 
 .form__book-button {
   display: inline-block;
+}
+
+.reservation-details {
+  position: relative;
+  width: 600px;
+}
+
+.reservation-details__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.reservation-details__item:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.reservation-details__thumbnail {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin-right: 50px;
+  background-image: url(/assets/images/x-trail.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.reservation-details__info {
+  display: inline-block;
+}
+
+.reservation-details__info > p {
+  margin: 3px;
+  font-size: 14.47px;
+}
+
+.reservation-details__total {
+  position: absolute;
+  right: 0;
+  width: 335px;
 }
