@@ -1032,7 +1032,13 @@ span {
 
 .reservation-details {
   position: relative;
-  width: 600px;
+  width: clamp(600px, 600px, 600px);
+}
+
+.reservation-details__item-container {
+  max-height: 455px;
+  padding: 10px 10px;
+  overflow: auto;
 }
 
 .reservation-details__item {
@@ -1080,5 +1086,5 @@ span {
 .reservation-details__total {
   position: absolute;
   right: 0;
-  width: 335px;
+  width: 325px;
 }

@@ -12,8 +12,12 @@ $(function() {
             loadReservationList();
         } else {
             $('.checkout__title').addClass('checkout__title--hide');
+            $('.checkout__form').addClass('checkout__form--hide');
+            $('.checkout__reservation-details').addClass('checkout__reservation-details--hide');
         }
     } else {
         $('.checkout__title').addClass('checkout__title--hide');
+        $('.checkout__form').addClass('checkout__form--hide');
+        $('.checkout__reservation-details').addClass('checkout__reservation-details--hide');
     }
 });
