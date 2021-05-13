@@ -1,11 +1,52 @@
 .checkout {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
-    margin-top: 20px;
     padding: 50px 200px;
+
+    border: 1px solid #000;
 
     //          ELEMENTS
 
+    &__warning {
+        width: 100%;
+        border: 1px solid #000;
+
+        //      MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+    }
+
     &__title {
+        width: 100%;
+        border: 1px solid #000;
+
+        //      MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__form {
+        width: 300px; // need update
+        height: 100px; // need to remove
+        border: 1px solid #000;
+
+        //      MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__reservation-details {
+        width: 300px; // need update
+        height: 100px; // need to remove
+        border: 1px solid #000;
+
         //      MODIFIERS
 
         &--hide {

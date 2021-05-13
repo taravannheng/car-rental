@@ -802,6 +802,15 @@ span {
   margin-right: 135px;
 }
 
+.important {
+  font-size: 12.94px;
+}
+
+.important__symbol {
+  font-size: inherit;
+  color: #fc0048;
+}
+
 .header {
   top: 0;
   left: 0;
@@ -850,7 +859,6 @@ span {
 
 .reservation {
   position: relative;
-  margin-top: 20px;
   padding: 50px 200px;
 }
 
@@ -892,11 +900,50 @@ span {
 }
 
 .checkout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: relative;
-  margin-top: 20px;
   padding: 50px 200px;
+  border: 1px solid #000;
+}
+
+.checkout__warning {
+  width: 100%;
+  border: 1px solid #000;
+}
+
+.checkout__warning--hide {
+  display: none;
+}
+
+.checkout__title {
+  width: 100%;
+  border: 1px solid #000;
 }
 
 .checkout__title--hide {
+  display: none;
+}
+
+.checkout__form {
+  width: 300px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+.checkout__form--hide {
+  display: none;
+}
+
+.checkout__reservation-details {
+  width: 300px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+.checkout__reservation-details--hide {
   display: none;
 }
