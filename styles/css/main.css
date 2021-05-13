@@ -867,6 +867,11 @@ span {
   border-top: 3px solid #0071ff;
 }
 
+.total__amount {
+  font-size: 14.47px;
+  font-weight: 700;
+}
+
 .header {
   top: 0;
   left: 0;

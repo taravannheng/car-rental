@@ -4,4 +4,11 @@
     font-weight: setFontWeight(bold-weight);
 
     border-top: 3px solid setColor(light-blue-color);
+
+    //              ELEMENT
+
+    &__amount {
+        font-size: setFontSize(nm-x1-size);
+        font-weight: setFontWeight(bold-weight);
+    }
 }

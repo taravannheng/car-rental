@@ -253,7 +253,7 @@ function updateRentalDaysMessage(messageEl, message = '') {
 //              RESERVATION DETAILS
 
 function createReservationDetailsItem(selectedCar) {
-    let reservationDetailsItemEl = $(`<div class="reservation-details__item" id="${selectedCar.id}"></div>`);
+    const reservationDetailsItem = $(`<div class="reservation-details__item" id="${selectedCar.id}"></div>`);
 
     $.getJSON('/json/cars.json', function(result) {
         let cars = result.cars;
@@ -264,21 +264,31 @@ function createReservationDetailsItem(selectedCar) {
                 const infoEl = $(`<div class="reservation-details__info"></div>`);
                 const vehicleEl = $(`<p class="reservation-details__vehicle">${car.brand} ${car.model} ${car.modelYear}</p>`);
                 const rentalDaysEl = $(`<p class="reservation-details__rental-days">${selectedCar.rentalDays} Rental Days</p>`);
-                const subTotal = $(`<p class="reservation-details__sub-total">$${(Number(selectedCar.rentalDays) * Number(car.pricePerDay)).toLocaleString()}</p>`);
+                const subTotalEl = $(`<p class="reservation-details__sub-total">$${(Number(selectedCar.rentalDays) * Number(car.pricePerDay)).toLocaleString()}</p>`);
 
                 infoEl.append(vehicleEl);
                 infoEl.append(rentalDaysEl);
-                infoEl.append(subTotal);
-                reservationDetailsItemEl.append(thumbnailEl);
-                reservationDetailsItemEl.append(infoEl);
+                infoEl.append(subTotalEl);
+                reservationDetailsItem.append(thumbnailEl);
+                reservationDetailsItem.append(infoEl);
+
+                //update total
+                let totalText = $('.total__amount').text();
+                totalText = totalText.replace(/\D/g, '');
+                let total = Number(totalText);
+                const subTotal = Number(selectedCar.rentalDays) * Number(car.pricePerDay);
+
+                total += subTotal;
+
+                $('.total__amount').text(total.toLocaleString());
             }    
         }); 
     });
 
-    return reservationDetailsItemEl;
+    return reservationDetailsItem;
 }
 
-function loadReservationDetailsItem(selectedCar) {
+function loadReservationDetails(selectedCar) {
     const selectedCarSession = JSON.parse(sessionStorage.getItem('selectedCars'));
 
     $.each(selectedCarSession, function(index, selectedCar) {

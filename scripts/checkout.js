@@ -28,6 +28,6 @@ $(function() {
     
 
     if (sessionStorage.getItem('selectedCars')) {
-        loadReservationDetailsItem();
+        loadReservationDetails();
     }
 });
