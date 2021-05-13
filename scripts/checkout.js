@@ -20,4 +20,14 @@ $(function() {
         $('.checkout__form').addClass('checkout__form--hide');
         $('.checkout__reservation-details').addClass('checkout__reservation-details--hide');
     }
+
+    //          FORM VALIDATION
+
+    //          RESERVATION DETAILS
+
+    
+
+    if (sessionStorage.getItem('selectedCars')) {
+        loadReservationDetailsItem();
+    }
 });

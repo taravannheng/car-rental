@@ -2,4 +2,6 @@
     width: 100%;
     font-size: setFontSize(nm-x1-size);
     font-weight: setFontWeight(bold-weight);
+
+    border-top: 3px solid setColor(light-blue-color);
 }

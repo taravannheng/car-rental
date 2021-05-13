@@ -2,8 +2,6 @@
     position: relative;
     width: clamp(600px, 600px, 600px);
 
-    // border: 1px solid #000;
-
     //          ELEMENTS
 
     &__item-container {
@@ -61,7 +59,7 @@
     &__total {
         position: absolute;
         right: 0;
-        width: 325px;
-        // border: 1px solid #000;
+        width: 315px;
+        margin-right: 10px;
     }
 }

@@ -249,3 +249,41 @@ function updateRentalDays(carID, rentalDays) {
 function updateRentalDaysMessage(messageEl, message = '') {
     messageEl.text(message);
 }
+
+//              RESERVATION DETAILS
+
+function createReservationDetailsItem(selectedCar) {
+    let reservationDetailsItemEl = $(`<div class="reservation-details__item" id="${selectedCar.id}"></div>`);
+
+    $.getJSON('/json/cars.json', function(result) {
+        let cars = result.cars;
+
+        $.each(cars, function(index, car) {
+            if (car.id === selectedCar.id) {
+                const thumbnailEl = $(`<div class="reservation-details__thumbnail" style="background-image: url(${car.image})"></div>`);
+                const infoEl = $(`<div class="reservation-details__info"></div>`);
+                const vehicleEl = $(`<p class="reservation-details__vehicle">${car.brand} ${car.model} ${car.modelYear}</p>`);
+                const rentalDaysEl = $(`<p class="reservation-details__rental-days">${selectedCar.rentalDays} Rental Days</p>`);
+                const subTotal = $(`<p class="reservation-details__sub-total">$${(Number(selectedCar.rentalDays) * Number(car.pricePerDay)).toLocaleString()}</p>`);
+
+                infoEl.append(vehicleEl);
+                infoEl.append(rentalDaysEl);
+                infoEl.append(subTotal);
+                reservationDetailsItemEl.append(thumbnailEl);
+                reservationDetailsItemEl.append(infoEl);
+            }    
+        }); 
+    });
+
+    return reservationDetailsItemEl;
+}
+
+function loadReservationDetailsItem(selectedCar) {
+    const selectedCarSession = JSON.parse(sessionStorage.getItem('selectedCars'));
+
+    $.each(selectedCarSession, function(index, selectedCar) {
+        const reservationDetailsItem = createReservationDetailsItem(selectedCar);
+
+        $('.reservation-details__item-container').append(reservationDetailsItem);
+    });
+}
