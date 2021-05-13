@@ -23,10 +23,12 @@ $(function() {
         $('.reservation__checkout-button').addClass('reservation__checkout-button--hide');
     }
 
-    //              RENTAL DAYS CONTROL
+    //              EVENT LISTENERS
 
     $('.reservation').on('click', function(e) {
         const targetEl = $(e.target);
+
+        //          RENTAL DAYS CONTROL
 
         if (targetEl.hasClass('rental-days-control__down-button')) {
             if (targetEl.next().val() > 1) {
@@ -55,10 +57,47 @@ $(function() {
 
             updateRentalDays(carID, rentalDays);
         }
+
+        //          DELETE BUTTON
+
+        if (targetEl.hasClass('reservation-item__delete-button') || targetEl.parent().hasClass('reservation-item__delete-button')) {
+            const carID = targetEl.parentsUntil('.reservation__list', '.reservation-item').attr('id');
+            let carIndex = 0;
+            
+            //remove car from selectedCars
+            $.each(selectedCars, function(index, selectedCar) {
+                if (carID === selectedCar.id) {
+                    carIndex = index;
+                }
+            });
+
+            selectedCars.splice(carIndex, 1);
+
+            //update selectedCarSession
+            sessionStorage.setItem('selectedCars', JSON.stringify(selectedCars));
+
+            //update reservation counter
+            updateReservationCounter();
+
+            // remove item
+            targetEl.parentsUntil('.reservation__list', '.reservation-item').remove();
+
+            // show message and hide reservation-related items
+            if ($('.reservation-item').length === 0) {
+                $('.reservation__warning').removeClass('warning--hide');
+                
+                $('.reservation__title').addClass('reservation__title--hide');
+                $('.reservation__labels').addClass('reservation__labels--hide');
+                $('.reservation__list').addClass('reservation__list--hide');
+                $('.reservation__checkout-button').addClass('reservation__checkout-button--hide');
+            }
+        }
     });
 
     $('.reservation').on('change', function(e) {
         const targetEl = $(e.target);
+
+        //          RENTAL DAYS CONTROL
 
         if (targetEl.hasClass('rental-days-control__input')) {
             const messageEl = targetEl.next().next();
@@ -78,7 +117,7 @@ $(function() {
             if (isValidAmount) {
                 //update session
                 const carID = targetEl.parentsUntil('.reservation__list', '.reservation-item').attr('id');
-                const rentalDays = targetEl.val();
+                const rentalDays = Number(targetEl.val());
 
                 updateRentalDays(carID, rentalDays);
             }
