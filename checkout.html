@@ -49,9 +49,70 @@
             <span class="title__text title__text--dark title__text--md-x1 title__text--bold-weight">CHECKOUT</span>
         </h2>
 
-        <div class="checkout__form form">
-            <p class="important"><span class="important__symbol">*</span> indicates required field.</p>
-        </div>
+        <form  class="checkout__form form">
+            <p class="form__message message"><span class="important-symbol">*</span> indicates required field.</p>
+            <h2 class="form__title title">
+                <span class="title__text title__text--dark title__text--nm-x2 title__text--medium-weight">Customer Details</span>
+            </h2>
+            <div class="form__input-control input-control">
+                <label for="first-name" class="input-control__label">First Name<span class="important-symbol">*</span>:</label>
+                <input type="text" class="input-control__input" id="first-name">
+            </div>
+            <div class="form__input-control input-control">
+                <label for="last-name" class="input-control__label">Last Name<span class="important-symbol">*</span>:</label>
+                <input type="text" class="input-control__input" id="last-name">
+            </div>
+            <div class="form__input-control input-control">
+                <label for="email" class="input-control__label">Email<span class="important-symbol">*</span>:</label>
+                <input type="text" class="input-control__input" id="email">
+            </div>
+            <h2 class="form__title title">
+                <span class="title__text title__text--dark title__text--nm-x2 title__text--medium-weight">Address</span>
+            </h2>
+            <div class="form__input-control input-control">
+                <label for="first-address" class="input-control__label">Address 1<span class="important-symbol">*</span>:</label>
+                <input type="text" class="input-control__input" id="first-address">
+            </div>
+            <div class="form__input-control input-control">
+                <label for="second-address" class="input-control__label">Address 2:</label>
+                <input type="text" class="input-control__input" id="second-address">
+            </div>
+            <div class="form__input-control input-control">
+                <label for="city" class="input-control__label">City<span class="important-symbol">*</span>:</label>
+                <input type="text" class="input-control__input" id="city">
+            </div>
+            <div class="form__input-control input-control">
+                <label for="state" class="input-control__label">State<span class="important-symbol">*</span>:</label>
+                <select class="input-control__select" id="state">
+                    <option value="nsw">New South Wales</option>
+                    <option value="qld">Queensland</option>
+                    <option value="tas">Tasmania</option>
+                    <option value="vic">Victoria</option>
+                    <option value="wa">Western Australia</option>
+                    <option value="sa">Sourth Australia</option>
+                </select>
+            </div>
+            <div class="form__input-control input-control">
+                <label for="postal-code" class="input-control__label">Postal Code<span class="important-symbol">*</span>:</label>
+                <input type="text" class="input-control__input" id="postal-code">
+            </div>
+            <h2 class="form__title title">
+                <span class="title__text title__text--dark title__text--nm-x2 title__text--medium-weight">Payment</span>
+            </h2>
+            <div class="form__input-control input-control">
+                <label for="payment-type" class="input-control__label">Payment Type<span class="important-symbol">*</span>:</label>
+                <select class="input-control__select" id="payment-type">
+                    <option value="amex">Amex</option>
+                    <option value="discover">Discover</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="visa">Visa</option>
+                </select>
+            </div>
+            <a href="/index.html" class="button">
+                <span class="button__text">Continue Selection</span>
+            </a>
+            <button type="Book" class="button"><span class="button__text">Book</span></button>
+        </form>
 
         <div class="checkout__reservation-details reservation-details">
 

@@ -1,11 +1,4 @@
-.important {
+.important-symbol {
     font-size: setFontSize(s-x2-size);
-
-    //          ELEMENTS
-
-    &__symbol {
-        font-size: inherit;
-
-        color: setColor(light-red-color);
-    }
+    color: setColor(light-red-color);
 }

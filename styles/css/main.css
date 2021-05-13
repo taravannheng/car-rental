@@ -802,13 +802,13 @@ span {
   margin-right: 135px;
 }
 
-.important {
+.important-symbol {
   font-size: 12.94px;
+  color: #fc0048;
 }
 
-.important__symbol {
-  font-size: inherit;
-  color: #fc0048;
+.message {
+  font-size: 12.94px;
 }
 
 .header {
@@ -929,8 +929,7 @@ span {
 }
 
 .checkout__form {
-  width: 300px;
-  height: 100px;
+  width: 500px;
   border: 1px solid #000;
 }
 
@@ -946,4 +945,21 @@ span {
 
 .checkout__reservation-details--hide {
   display: none;
+}
+
+.form__important {
+  margin: 0;
+  border: 1px solid #000;
+}
+
+.form__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+  margin: 0 0 10px 0;
+  border: 1px solid #000;
 }
