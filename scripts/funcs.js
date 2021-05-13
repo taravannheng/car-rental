@@ -246,6 +246,6 @@ function updateRentalDays(carID, rentalDays) {
     sessionStorage.setItem('selectedCars', JSON.stringify(selectedCarSession));
 }
 
-function displayRentalDaysMessage(messageEl, message = '') {
+function updateRentalDaysMessage(messageEl, message = '') {
     messageEl.text(message);
 }

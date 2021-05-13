@@ -35,6 +35,12 @@ $(function() {
                 targetEl.next().val(function(index, oldValue) {
                     return --oldValue;
                 });
+
+
+                if (targetEl.next().val() >= 1 && targetEl.next().val() <= 30) {
+                    const messageEl = targetEl.next().next().next();
+                    updateRentalDaysMessage(messageEl);
+                }
             }
 
             //update session
@@ -49,6 +55,11 @@ $(function() {
                 targetEl.prev().val(function(index, oldValue) {
                     return ++oldValue;
                 });
+
+                if (targetEl.prev().val() >= 1 && targetEl.prev().val() <= 30) {
+                    const messageEl = targetEl.next();
+                    updateRentalDaysMessage(messageEl);
+                }
             }
 
             //update session
@@ -105,13 +116,13 @@ $(function() {
 
             if (targetEl.val() < 1) {
                 isValidAmount = false;
-                displayRentalDaysMessage(messageEl, 'Invalid Rental Days!');
+                updateRentalDaysMessage(messageEl, 'Invalid Rental Days!');
             } else if (targetEl.val() > 30) {
                 isValidAmount = false;
-                displayRentalDaysMessage(messageEl, 'Rental cannot exceed 30 days!');
+                updateRentalDaysMessage(messageEl, 'Rental cannot exceed 30 days!');
             } else {
                 isValidAmount = true;
-                displayRentalDaysMessage(messageEl);
+                updateRentalDaysMessage(messageEl);
             }
 
             if (isValidAmount) {
