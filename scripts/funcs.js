@@ -125,7 +125,7 @@ function removeSelectedCar(carID) {
 function addSelectedCar(carID) {
     const car = {
         id: carID,
-        quantity: 1
+        rentalDays: 1
     }
 
     selectedCars.push(car);
@@ -232,4 +232,16 @@ function loadReservationList() {
             $('.reservation__list').append(reservationItem);
         });
     }
+}
+
+function updateRentalDays(carID, rentalDays) {
+    const selectedCarSession = JSON.parse(sessionStorage.getItem('selectedCars'));
+
+    $.each(selectedCarSession, function(index, selectedCar) {
+        if (selectedCar.id === carID) {
+            selectedCar.rentalDays = rentalDays;
+        }
+    });
+
+    sessionStorage.setItem('selectedCars', JSON.stringify(selectedCarSession));
 }

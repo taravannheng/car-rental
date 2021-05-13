@@ -34,6 +34,12 @@ $(function() {
                     return --oldValue;
                 });
             }
+
+            //update session
+            const carID = targetEl.parentsUntil('.reservation__list', '.reservation-item').attr('id');
+            const rentalDays = targetEl.next().val();
+
+            updateRentalDays(carID, rentalDays);
         }
 
         if (targetEl.hasClass('rental-days-control__up-button')) {
@@ -42,6 +48,12 @@ $(function() {
                     return ++oldValue;
                 });
             }
+
+            //update session
+            const carID = targetEl.parentsUntil('.reservation__list', '.reservation-item').attr('id');
+            const rentalDays = targetEl.prev().val();
+
+            updateRentalDays(carID, rentalDays);
         }
     });
 });
