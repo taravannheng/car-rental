@@ -1,4 +1,6 @@
 $(function() {
+    //              INITIAL LOADING
+
     if (sessionStorage.getItem('selectedCars')) {
         const selectedCarSession = JSON.parse(sessionStorage.getItem('selectedCars'));
     
@@ -20,5 +22,26 @@ $(function() {
         $('.reservation__list').addClass('reservation__list--hide');
         $('.reservation__checkout-button').addClass('reservation__checkout-button--hide');
     }
-});
 
+    //              RENTAL DAYS CONTROL
+
+    $('.reservation').on('click', function(e) {
+        const targetEl = $(e.target);
+
+        if (targetEl.hasClass('rental-days-control__down-button')) {
+            if (targetEl.next().val() > 1) {
+                targetEl.next().val(function(index, oldValue) {
+                    return --oldValue;
+                });
+            }
+        }
+
+        if (targetEl.hasClass('rental-days-control__up-button')) {
+            if (targetEl.prev().val() < 30) {
+                targetEl.prev().val(function(index, oldValue) {
+                    return ++oldValue;
+                });
+            }
+        }
+    });
+});
