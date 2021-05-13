@@ -56,4 +56,33 @@ $(function() {
             updateRentalDays(carID, rentalDays);
         }
     });
+
+    $('.reservation').on('change', function(e) {
+        const targetEl = $(e.target);
+
+        if (targetEl.hasClass('rental-days-control__input')) {
+            const messageEl = targetEl.next().next();
+            let isValidAmount = true;
+
+            if (targetEl.val() < 1) {
+                isValidAmount = false;
+                displayRentalDaysMessage(messageEl, 'Invalid Rental Days!');
+            } else if (targetEl.val() > 30) {
+                isValidAmount = false;
+                displayRentalDaysMessage(messageEl, 'Rental cannot exceed 30 days!');
+            } else {
+                isValidAmount = true;
+                displayRentalDaysMessage(messageEl);
+            }
+
+            if (isValidAmount) {
+                //update session
+                const carID = targetEl.parentsUntil('.reservation__list', '.reservation-item').attr('id');
+                const rentalDays = targetEl.val();
+
+                updateRentalDays(carID, rentalDays);
+            }
+
+        }
+    });
 });
