@@ -60,7 +60,7 @@ function createCarEl(car) {
 
 function loadContents() {
     $.getJSON('/json/cars.json', function(result) {
-        cars = result.cars;
+        let cars = result.cars;
 
         $.each(cars, function(index, car) {
             const carEl = createCarEl(car);
@@ -174,4 +174,55 @@ function updateReservationCounter() {
     const numberOfReservations = selectedCars.length;
 
     counterText.text(numberOfReservations);
+}
+
+/*          RESERVATION LIST FUNCTIONALITY          */
+
+function createReservationItem(selectedCar) {
+    let reservationItemEl = $(`<div class="reservation-item" id="${selectedCar}"></div>`);
+
+    $.getJSON('/json/cars.json', function(result) {
+        let cars = result.cars;
+
+        $.each(cars, function(index, car) {
+            if (car.id === selectedCar) {
+                const thumbnailEl = $(`<div class="reservation-item__thumbnail" style="background-image: url(${car.image})"></div>`);
+                const vehicleEl = $(`<p class="reservation-item__vehicle">${car.brand} ${car.model} ${car.modelYear}</p>`);
+                const pricePerDayEl = $(`<p class="reservation-item__price-per-day">$${car.pricePerDay}</p>`);
+                const rentalDaysControlEl = $(`
+                    <div class="reservation-item__rental-days rental-days-control">
+                        <i class="rental-days-control__up-button fas fa-sort-up"></i>
+                        <input type="number" name="rental_days" class="rental-days-control__input" min="1" value="1" max="30">    
+                        <i class="rental-days-control__down-button fas fa-sort-down"></i>
+                        <p class="rental-days-control__message"></p>
+                    </div>
+                `);
+                const deleteButtonEl = $(`
+                    <button type="button" class="reservation-item__delete-button button">
+                        <span class="button__text">Delete</span>
+                    </button>
+                `);
+    
+                reservationItemEl.append(thumbnailEl);
+                reservationItemEl.append(vehicleEl);
+                reservationItemEl.append(pricePerDayEl);
+                reservationItemEl.append(rentalDaysControlEl);
+                reservationItemEl.append(deleteButtonEl);
+            }    
+        }); 
+    });
+
+    return reservationItemEl;
+}
+
+function loadReservationList() {
+    if (selectedCars.length === 0) {
+        $('.reservation__list').html('');
+    } else {
+        $.each(selectedCars, function(index, selectedCar) {
+            const reservationItem = createReservationItem(selectedCar);
+
+            $('.reservation__list').append(reservationItem);
+        });
+    }
 }

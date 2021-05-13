@@ -1,4 +1,3 @@
-let cars;
 let selectedCars = [];
 
 /*              SESSIONS                */

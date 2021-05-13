@@ -8,6 +8,8 @@ if (sessionStorage.getItem('selectedCars')) {
     
     if (selectedCarSession.length > 0) {
         $('.reservation__warning').addClass('warning--hide');
+
+        loadReservationList();
     } else {
         $('.reservation__title').addClass('reservation__title--hide');
         $('.reservation__labels').addClass('reservation__labels--hide');
