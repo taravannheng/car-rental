@@ -1,0 +1,15 @@
+.checkout {
+    position: relative;
+    margin-top: 20px;
+    padding: 50px 200px;
+
+    //          ELEMENTS
+
+    &__title {
+        //      MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+    }
+}

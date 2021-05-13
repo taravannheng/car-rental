@@ -890,3 +890,13 @@ span {
 .reservation__checkout-button--hide {
   display: none;
 }
+
+.checkout {
+  position: relative;
+  margin-top: 20px;
+  padding: 50px 200px;
+}
+
+.checkout__title--hide {
+  display: none;
+}
