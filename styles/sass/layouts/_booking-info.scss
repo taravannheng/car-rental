@@ -1,0 +1,22 @@
+.booking-info {
+
+    //              ELEMENTS
+
+    &__home-button {
+        width: 190px;
+        margin-top: 30px;
+        text-align: center;
+
+        & i {
+            margin-right: 10px;
+        }
+    }
+
+    //              CHILDREN
+
+    & p {
+        font-size: setFontSize(nm-x1-size);
+        line-height: setLineHeight(mono-x1-height);
+        margin-bottom: 0px;
+    }
+}

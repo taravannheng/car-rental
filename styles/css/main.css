@@ -1096,3 +1096,57 @@ span {
   width: 315px;
   margin-right: 10px;
 }
+
+.confirmation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+  padding: 50px 200px;
+}
+
+.confirmation__warning {
+  width: 100%;
+}
+
+.confirmation__warning--hide {
+  display: none;
+}
+
+.confirmation__title {
+  width: 100%;
+}
+
+.confirmation__title--hide {
+  display: none;
+}
+
+.confirmation__booking-info {
+  margin-right: 100px;
+}
+
+.confirmation__booking-info--hide {
+  display: none;
+}
+
+.confirmation__reservation-details--hide {
+  display: none;
+}
+
+.booking-info__home-button {
+  width: 190px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.booking-info__home-button i {
+  margin-right: 10px;
+}
+
+.booking-info p {
+  font-size: 14.47px;
+  line-height: 18px;
+  margin-bottom: 0px;
+}

@@ -1,0 +1,51 @@
+.confirmation {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 50px 200px;
+
+    //          ELEMENTS
+
+    &__warning {
+        width: 100%;
+        // border: 1px solid #000;
+
+        //      MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        // border: 1px solid #000;
+
+        //      MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__booking-info {
+        margin-right: 100px;
+        // border: 1px solid #000;
+
+        //      MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    &__reservation-details {
+        // border: 1px solid #000;
+
+        //      MODIFIERS
+
+        &--hide {
+            display: none;
+        }
+    }
+}
