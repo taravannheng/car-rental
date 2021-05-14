@@ -8,8 +8,6 @@ $(function() {
         
         if (selectedCarSession.length > 0) {
             $('.checkout__warning').addClass('warning--hide');
-    
-            loadReservationList();
         } else {
             $('.checkout__title').addClass('checkout__title--hide');
             $('.checkout__form').addClass('checkout__form--hide');
@@ -19,6 +17,46 @@ $(function() {
         $('.checkout__title').addClass('checkout__title--hide');
         $('.checkout__form').addClass('checkout__form--hide');
         $('.checkout__reservation-details').addClass('checkout__reservation-details--hide');
+    }
+
+    if (sessionStorage.getItem('booking')) {
+        const booking = JSON.parse(sessionStorage.getItem('booking'));
+
+        $.each($('.input-control__input'), function(index, inputControlInput) {
+            const inputEl = $(inputControlInput);
+            const inputID = inputEl.attr('id');
+    
+            switch (inputID) {
+                case 'first-name':
+                    inputEl.val(booking.firstName);
+                    break;
+                case 'last-name':
+                    inputEl.val(booking.lastName);
+                    break;
+                case 'email':
+                    inputEl.val(booking.email);
+                    break;
+                case 'first-address':
+                    inputEl.val(booking.firstAddress);
+                    break;
+                case 'second-address':
+                    inputEl.val(booking.secondAddress);
+                    break;
+                case 'city':
+                    inputEl.val(booking.city);
+                    break;
+                case 'state':
+                    const stateCode = getStateCode(booking.state);
+                    inputEl.val(stateCode);
+                    break;
+                case 'postal-code':
+                    inputEl.val(booking.postalCode);
+                    break;
+                case 'payment-type':
+                    inputEl.val(booking.paymentType);
+                    break;
+            }
+        });
     }
 
     //          FORM VALIDATION
@@ -34,6 +72,7 @@ $(function() {
                 errorMessageEl.addClass('input-control__error-message--show');            
             } else {
                 errorMessageEl.removeClass('input-control__error-message--show');
+                updateBookingSession();
             }
         }
     });
@@ -47,6 +86,7 @@ $(function() {
             errorMessageEl.addClass('input-control__error-message--show');
         } else {
             errorMessageEl.removeClass('input-control__error-message--show');
+            updateBookingSession();
         }
     });
 
@@ -75,6 +115,10 @@ $(function() {
                 errorMessageEl.addClass('input-control__error-message--show');
             }
         });
+
+        //update session
+        updateBookingSession();
+        updateLastBookingSession();
 
         if (isValidForm) {
             window.location.href = '/confirmation.html';

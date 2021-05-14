@@ -288,8 +288,14 @@ function createReservationDetailsItem(selectedCar) {
     return reservationDetailsItem;
 }
 
-function loadReservationDetails(selectedCar) {
-    const selectedCarSession = JSON.parse(sessionStorage.getItem('selectedCars'));
+function loadReservationDetails(lastBooking) {
+    let selectedCarSession;
+
+    if (lastBooking) {
+        selectedCarSession = lastBooking.selectedCars;
+    } else {
+        selectedCarSession = JSON.parse(sessionStorage.getItem('selectedCars'));
+    }
 
     $.each(selectedCarSession, function(index, selectedCar) {
         const reservationDetailsItem = createReservationDetailsItem(selectedCar);
@@ -310,4 +316,169 @@ function isNotEmpty(inputValue) {
 
 function isValidEmail(inputValue) {
     return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(inputValue);
+}
+
+function getStateName(inputValue) {
+    let stateName;
+
+    switch (inputValue) {
+        case 'nsw':
+            stateName = 'New South Wales';
+            break;
+        case 'qld':
+            stateName = 'Queensland';
+            break;
+        case 'tas':
+            stateName = 'Tasmania';
+            break;
+        case 'vic':
+            stateName = 'Victoria';
+            break;
+        case 'wa':
+            stateName = 'Western Australia';
+            break;
+        case 'sa':
+            stateName = 'Southern Australia';
+            break;            
+    }
+
+    return stateName;
+}
+
+function getStateCode(stateName) {
+    let stateCode;
+
+    switch (stateName) {
+        case 'New South Wales':
+            stateCode = 'nsw';
+            break;
+        case 'Queensland':
+            stateCode = 'qld';
+            break;
+        case 'Tasmania':
+            stateCode = 'tas';
+            break;
+        case 'Victoria':
+            stateCode = 'vic';
+            break;
+        case 'Western Australia':
+            stateCode = 'wa';
+            break;
+        case 'Southern Australia':
+            stateCode = 'sa';
+            break;            
+    }
+
+    return stateCode;
+}
+
+function getBookingID() {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    const orderIDLength = 7;
+    let orderID = [];
+
+    for (let i = 0; i < orderIDLength; i++) {
+        orderID.push(characters[Math.floor(Math.random() * characters.length)]);
+    }
+
+    return orderID.join('');
+}
+
+function updateBookingSession() {
+    const booking = {
+        id: '',
+        firstName: '',
+        lastName: '',
+        email: '',
+        firstAddress: '',
+        secondAddress: '',
+        city: '',
+        state: '',
+        postalCode: '',
+        paymentType: ''
+    }
+
+    if (booking.id === '') {
+        booking.id = getBookingID();
+    }
+
+    $.each($('.input-control__input'), function(index, inputControlInput) {
+        const inputEl = $(inputControlInput);
+        const inputID = inputEl.attr('id');
+
+        switch (inputID) {
+            case 'first-name':
+                booking.firstName = inputEl.val();
+                break;
+            case 'last-name':
+                booking.lastName = inputEl.val();
+                break;
+            case 'email':
+                booking.email = inputEl.val();
+                break;
+            case 'first-address':
+                booking.firstAddress = inputEl.val();
+                break;
+            case 'second-address':
+                booking.secondAddress = inputEl.val();
+                break;
+            case 'city':
+                booking.city = inputEl.val();
+                break;
+            case 'state':
+                const stateName = getStateName(inputEl.val());
+                booking.state = stateName;
+                break;
+            case 'postal-code':
+                booking.postalCode = inputEl.val();
+                break;
+            case 'payment-type':
+                booking.paymentType = inputEl.val();
+                break;
+        }
+    });
+
+    sessionStorage.setItem('booking', JSON.stringify(booking));
+}
+
+function updateLastBookingSession() {
+    let booking = JSON.parse(sessionStorage.getItem('booking'));
+    let bookedCars = JSON.parse(sessionStorage.getItem('selectedCars')); 
+
+    let lastBooking = {
+        id: booking.id,
+        address: booking.firstAddress,
+        city: booking.city,
+        state: booking.state,
+        postalCode: booking.postalCode,
+        selectedCars: bookedCars
+    }
+    
+    sessionStorage.setItem('lastBooking', JSON.stringify(lastBooking));
+}
+
+//          BOOKING INFO
+
+function generateBookingInfo() {
+    const lastBooking = JSON.parse(sessionStorage.getItem('lastBooking'));
+
+    //update booking id
+    $('.booking-info__id').text('#' + lastBooking.id);
+
+    //update address
+    $('.booking-info__address').text(lastBooking.firstAddress);
+    $('.booking-info__city').text(lastBooking.city);
+    $('.booking-info__state').text(lastBooking.state);
+    $('.booking-info__postal-code').text(lastBooking.postalCode);
+}
+
+//          RESET
+
+function resetInfo() {
+    //clear sessions
+    sessionStorage.removeItem('booking');
+    sessionStorage.removeItem('selectedCars');
+
+    //reset reservation counter
+    $('.counter__text').text('0');
 }
