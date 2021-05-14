@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hertz-UTS</title>
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon-precomposed" type="image/png" sizes="144x144" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="/assets/favicon/favicon-32x32.png">
+    <link rel="shortcut icon" href="/assets/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/css/main.css">
+    <script src="https://kit.fontawesome.com/26d4a64054.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/scripts/vars.js" defer></script>
+    <script src="/scripts/funcs.js" defer></script>
+    <script src="/scripts/main.js" defer></script>
+    <script src="/scripts/reservation.js" defer></script>
+    <script src="/scripts/confirmation.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <!-- logo -->
+        <a href="/index.html"><div class="header__logo logo logo--small"></div></a>    
+
+        <!-- title -->
+        <h1 class="header__title title">
+            <span class="title__text title__text--light title__text--l-x2 title__text--black-weight">Car Rental Center</span>
+        </h1>
+
+        <!-- buttons -->
+        <a href="/reservation.html" class="header__cart button">
+            <span class="button__text">Car Reservation</span>
+            <div class="counter">
+                <span class="counter__text">0</span>
+            </div>
+        </a>
+    </header>
+    <main class="confirmation">
+        <div class="confirmation__warning warning">
+            <p class="confirmation__message">There is no reservation.</p>
+        </div>
+
+        <h2 class="confirmation__title title">
+            <span class="title__text title__text--dark title__text--md-x1 title__text--bold-weight">THANK YOU FOR YOUR RESERVATIONS</span>
+        </h2>
+        <div class="confirmation__booking-info booking-info">
+            <div class="booking-info__container">
+                <h2 class="booking-info__title title">
+                    <span class="title__text title__text--dark title__text--nm-x2 title__text--medium-weight">Reservation ID</span>
+                </h2>
+                <p class="booking-info__id">#ACD8PE</p>
+            </div>
+            <div class="booking-info__container">
+                <h2 class="booking-info__title title">
+                    <span class="title__text title__text--dark title__text--nm-x2 title__text--medium-weight">Address</span>
+                </h2>
+                <p>Vehicles will be delivered to the following address:</p>
+                <p class="booking-info__address">702 - 730 Harris Street</p>
+                <p class="booking-info__city">Sydney</p>
+                <p class="booking-info__state">New South Wales</p>
+                <p class="booking-info__postal-code">2007</p>
+            </div>
+            <div class="booking-info__container">
+                <h2 class="booking-info__title title">
+                    <span class="title__text title__text--dark title__text--nm-x2 title__text--medium-weight">Contact</span>
+                </h2>
+                <p>If you have any queries, please contact us at:</p>
+                <p class="booking-info__phone-number">+61 491 570 006</p>
+            </div>
+        </div>
+        <div class="confirmation__reservation-details reservation-details">
+            <h2 class="reservation-details__title title">
+                <span class="title__text title__text--dark title__text--nm-x2 title__text--medium-weight">Reservation Details</span>
+            </h2>
+            <div class="reservation-details__item-container">
+            </div>
+            <p class="reservation-details__total total">TOTAL: $<span class="total__amount">0</span></p>
+        </div>
+        <a href="/index.html" class="confirmation__home-button button">
+            <span class="button__text">Back to Home Page</span>
+        </a>
+    </main>
+</body>
+</html>
