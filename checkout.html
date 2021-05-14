@@ -65,7 +65,7 @@
                 <input type="text" class="input-control__input" id="last-name" maxlength="50">
             </div>
             <div class="form__input-control input-control">
-                <p class="input-control__error-message">Email is required!</p>
+                <p class="input-control__error-message">Invalid Email!</p>
                 <label for="email" class="input-control__label">Email<span class="important-symbol">*</span>:</label>
                 <input type="text" class="input-control__input" id="email" maxlength="320">
             </div>
@@ -89,7 +89,7 @@
             </div>
             <div class="form__input-control input-control">
                 <label for="state" class="input-control__label">State<span class="important-symbol">*</span>:</label>
-                <select class="input-control__select" id="state">
+                <select class="input-control__input" id="state">
                     <option value="nsw">New South Wales</option>
                     <option value="qld">Queensland</option>
                     <option value="tas">Tasmania</option>
@@ -108,7 +108,7 @@
             </h2>
             <div class="form__input-control input-control">
                 <label for="payment-type" class="input-control__label">Payment Type<span class="important-symbol">*</span>:</label>
-                <select class="input-control__select" id="payment-type">
+                <select class="input-control__input" id="payment-type">
                     <option value="amex">Amex</option>
                     <option value="discover">Discover</option>
                     <option value="mastercard">Mastercard</option>
@@ -118,7 +118,7 @@
             <a href="/index.html" class="form__continue-selection-button button">
                 <span class="button__text">Continue Selection</span>
             </a>
-            <button type="Book" class="form__book-button button"><span class="button__text">Book</span></button>
+            <button type="button" class="form__book-button button"><span class="button__text">Book</span></button>
         </form>
 
         <div class="checkout__reservation-details reservation-details">

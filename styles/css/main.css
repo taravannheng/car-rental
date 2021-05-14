@@ -831,14 +831,14 @@ span {
   font-size: 14.47px;
 }
 
-.input-control__input, .input-control__select {
+.input-control__input {
   width: 225px;
   padding: 5px 5px;
   border: 1px solid #000;
   font-size: 14.47px;
 }
 
-.input-control__input:focus, .input-control__select:focus {
+.input-control__input:focus {
   outline: 0;
 }
 
@@ -1030,6 +1030,7 @@ span {
   width: 170px;
   margin-top: 25px;
   margin-right: 10px;
+  text-align: center;
 }
 
 .form__book-button {

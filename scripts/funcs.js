@@ -297,3 +297,17 @@ function loadReservationDetails(selectedCar) {
         $('.reservation-details__item-container').append(reservationDetailsItem);
     });
 }
+
+//          FORM VALIDATION
+
+function isNotEmpty(inputValue) {
+    let validStatus = false;
+
+    inputValue === '' ? validStatus = false : validStatus = true;
+
+    return validStatus;
+}
+
+function isValidEmail(inputValue) {
+    return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(inputValue);
+}
