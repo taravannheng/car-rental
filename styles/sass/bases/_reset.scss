@@ -13,3 +13,23 @@ a {
     text-decoration: none;
 }
 
+input {
+    
+    // ||           pseudo-classes          //
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+input[type="number"] {
+
+    // ||           pseudo-elements         //
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        appearance: none;
+        margin: 0;
+    }
+}
+

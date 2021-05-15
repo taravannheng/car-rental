@@ -22,20 +22,6 @@
         text-align: center;
 
         border-radius: 5px;
-
-        // ||           pseudo-elements         //
-
-        &::-webkit-outer-spin-button,
-        &::-webkit-inner-spin-button {
-            appearance: none;
-            margin: 0;
-        }
-
-        // ||           pseudo-classes          //
-
-        &:focus {
-            outline: 0;
-        }
     }
 
     &__down-button {
