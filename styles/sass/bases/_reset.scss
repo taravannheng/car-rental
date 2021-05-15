@@ -14,12 +14,17 @@ a {
 }
 
 input {
-    
+
     // ||           pseudo-classes          //
 
     &:focus {
         outline: 0;
     }
+}
+
+select {
+    appearance: none;
+    border-radius: 0;
 }
 
 input[type="number"] {

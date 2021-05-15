@@ -360,6 +360,13 @@ input:focus {
   outline: 0;
 }
 
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+}
+
 input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
           appearance: none;
@@ -833,13 +840,20 @@ span {
 
 .input-control__input {
   width: 225px;
+  height: 30px;
   padding: 5px 5px;
-  border: 1px solid #000;
+  border: 1px solid #2a272a;
   font-size: 14.47px;
 }
 
 .input-control__input:focus {
   outline: 0;
+}
+
+.input-control__down-arrow {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
 }
 
 .input-control__error-message {

@@ -13,8 +13,9 @@
 
     &__input {
         width: 225px;
+        height: 30px;
         padding: 5px 5px;
-        border: 1px solid #000;
+        border: 1px solid setColor(dark-color);
         font-size: setFontSize(nm-x1-size);
 
         //          PSEUDO-CLASSES
@@ -22,6 +23,12 @@
         &:focus {
             outline: 0;
         }
+    }
+
+    &__down-arrow {
+        position: absolute;
+        right: 10px;
+        pointer-events: none;
     }
 
     &__error-message {
