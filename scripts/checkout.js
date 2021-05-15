@@ -90,6 +90,20 @@ $(function() {
         }
     });
 
+    $('#postal-code').on('change', function(e) {
+        const targetEl = $(e.target);
+        const errorMessageEl = targetEl.prev().prev();
+        const status = checkPostalCode(targetEl.val());
+
+        if (!status.valid) {
+            errorMessageEl.addClass('input-control__error-message--show');
+            errorMessageEl.text(status.message);
+        } else {
+            errorMessageEl.removeClass('input-control__error-message--show');
+            updateBookingSession();
+        }
+    });
+
     $('.form__book-button').on('click', function(e) {
         const targetEl = $(e.target);
         const inputControlInputs = $('.input-control__input');
@@ -104,6 +118,8 @@ $(function() {
                 isValid = true;
             } else if (inputEl.attr('id') === 'email') {
                 isValid = isValidEmail(inputEl.val());
+            } else if (inputEl.attr('id') === 'postal-code') {
+                isValid = checkPostalCode(inputEl.val()).valid;
             } else {
                 isValid = isNotEmpty(inputEl.val());
             }

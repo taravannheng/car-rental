@@ -318,6 +318,25 @@ function isValidEmail(inputValue) {
     return /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(inputValue);
 }
 
+function checkPostalCode(inputValue) {
+    let status = {
+        valid: true,
+        message: 'Invalid Postal Code!'
+    }
+
+    if (inputValue.length !== 4) {
+        status.valid = false;
+    }
+
+    if (status.valid) {
+        if (isNaN(inputValue)) {
+            status.valid = false;
+        }
+    }
+
+    return status;
+}
+
 function getStateName(inputValue) {
     let stateName;
 

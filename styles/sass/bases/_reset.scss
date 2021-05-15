@@ -28,6 +28,7 @@ select {
 }
 
 input[type="number"] {
+    -moz-appearance: textfield;
 
     // ||           pseudo-elements         //
 
