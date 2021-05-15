@@ -1163,7 +1163,7 @@ span {
   margin-right: 10px;
 }
 
-.booking-info p {
+.booking-info p, .booking-info span {
   font-size: 14.47px;
   line-height: 18px;
   margin-bottom: 0px;

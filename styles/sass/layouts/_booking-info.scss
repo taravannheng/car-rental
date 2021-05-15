@@ -14,7 +14,7 @@
 
     //              CHILDREN
 
-    & p {
+    & p, & span {
         font-size: setFontSize(nm-x1-size);
         line-height: setLineHeight(mono-x1-height);
         margin-bottom: 0px;
