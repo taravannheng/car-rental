@@ -199,7 +199,7 @@ function createReservationItem(selectedCar) {
                 const rentalDaysControlEl = $(`
                     <div class="reservation-item__rental-days rental-days-control">
                         <i class="rental-days-control__down-button fas fa-sort-down"></i>
-                        <input type="number" name="rental_days" class="rental-days-control__input" min="1" value="1" max="30">    
+                        <input type="number" name="rental_days" class="rental-days-control__input" min="1" value="${selectedCar.rentalDays}" max="30">    
                         <i class="rental-days-control__up-button fas fa-sort-up"></i>
                         <p class="rental-days-control__message"></p>
                     </div>
