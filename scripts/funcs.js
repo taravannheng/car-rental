@@ -484,8 +484,6 @@ function generateBookingInfo() {
     //update booking id
     $('.booking-info__id').text('#' + lastBooking.id);
 
-    console.log(lastBooking.firstAddress);
-
     //update address
     $('.booking-info__address').text(lastBooking.address);
     $('.booking-info__city').text(lastBooking.city);
