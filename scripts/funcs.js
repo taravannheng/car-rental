@@ -115,11 +115,15 @@ function isSelected(carID) {
 }
 
 function removeSelectedCar(carID) {
+    let matchIndex;
+
     $.each(selectedCars, function(index, selectedCar) {
         if (carID === selectedCar.id) {
-            selectedCars.splice(index, 1);
+            matchIndex = index;
         }
     });
+
+    selectedCars.splice(matchIndex, 1);
 }
 
 function addSelectedCar(carID) {
