@@ -341,6 +341,42 @@ function checkPostalCode(inputValue) {
     return status;
 }
 
+function isValidForm() {
+    const inputControlInputs = $('.input-control__input');
+    let isValidForm = true;
+
+    $.each(inputControlInputs, function(index, inputControlInput) {
+        const inputEl = $(inputControlInput);
+        const errorMessageEl = inputEl.prev().prev();
+        let isValid;
+        
+        if (inputEl.attr('id') === 'second-address') {
+            isValid = true;
+        } else if (inputEl.attr('id') === 'email') {
+            isValid = isValidEmail(inputEl.val());
+        } else if (inputEl.attr('id') === 'postal-code') {
+            isValid = checkPostalCode(inputEl.val()).valid;
+        } else {
+            isValid = isNotEmpty(inputEl.val());
+        }
+
+        if (isValid) {
+            errorMessageEl.removeClass('input-control__error-message--show');
+        } else {
+            isValidForm = false;
+            errorMessageEl.addClass('input-control__error-message--show');
+        }
+    });
+
+    //update session
+    updateBookingSession();
+    updateLastBookingSession();
+
+    return isValidForm;
+}
+
+//          CONFIRMATION
+
 function getStateName(inputValue) {
     let stateName;
 
