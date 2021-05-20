@@ -1,5 +1,13 @@
 .booking-info {
 
+    //              CHILDREN
+
+    & p, & span {
+        font-size: setFontSize(nm-x1-size);
+        line-height: setLineHeight(mono-x1-height);
+        margin-bottom: 0px;
+    }
+
     //              ELEMENTS
 
     &__home-button {
@@ -12,11 +20,7 @@
         }
     }
 
-    //              CHILDREN
-
-    & p, & span {
-        font-size: setFontSize(nm-x1-size);
-        line-height: setLineHeight(mono-x1-height);
-        margin-bottom: 0px;
+    &__title span {
+        font-size: setFontSize(nm-x2-size);
     }
 }
