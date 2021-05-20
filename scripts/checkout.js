@@ -75,10 +75,6 @@ $(function() {
                 updateBookingSession();
             }
         }
-
-        if (isValidForm()) {
-            window.location.href = '/confirmation.html';
-        }
     });
 
     $('#email').on('change', function(e) {
@@ -91,10 +87,6 @@ $(function() {
         } else {
             errorMessageEl.removeClass('input-control__error-message--show');
             updateBookingSession();
-        }
-
-        if (isValidForm()) {
-            window.location.href = '/confirmation.html';
         }
     });
 
@@ -110,16 +102,41 @@ $(function() {
             errorMessageEl.removeClass('input-control__error-message--show');
             updateBookingSession();
         }
-
-        if (isValidForm()) {
-            window.location.href = '/confirmation.html';
-        }
     });
 
     $('.form__book-button').on('click', function(e) {
         const targetEl = $(e.target);
+        const inputControlInputs = $('.input-control__input');
+        let isValidForm = true;
 
-        if (isValidForm()) {
+        $.each(inputControlInputs, function(index, inputControlInput) {
+            const inputEl = $(inputControlInput);
+            const errorMessageEl = inputEl.prev().prev();
+            let isValid;
+            
+            if (inputEl.attr('id') === 'second-address') {
+                isValid = true;
+            } else if (inputEl.attr('id') === 'email') {
+                isValid = isValidEmail(inputEl.val());
+            } else if (inputEl.attr('id') === 'postal-code') {
+                isValid = checkPostalCode(inputEl.val()).valid;
+            } else {
+                isValid = isNotEmpty(inputEl.val());
+            }
+
+            if (isValid) {
+                errorMessageEl.removeClass('input-control__error-message--show');
+            } else {
+                isValidForm = false;
+                errorMessageEl.addClass('input-control__error-message--show');
+            }
+        });
+
+        //update session
+        updateBookingSession();
+        updateLastBookingSession();
+
+        if (isValidForm) {
             window.location.href = '/confirmation.html';
         }
     });
