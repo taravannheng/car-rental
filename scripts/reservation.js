@@ -135,4 +135,17 @@ $(function() {
 
         }
     });
+
+    //          CHECKOUT BUTTON
+
+    $('.reservation__checkout-button').on('click', function(e) {
+        const targetEl = $(e.target);
+
+        // prevent checkout if invalid inputs
+        $('.rental-days-control__input').each(function() {
+            if ($(this).val() <= 0) {
+                e.preventDefault();
+            }
+        });
+    });
 });
