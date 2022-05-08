@@ -813,6 +813,10 @@ span {
   margin-right: 135px;
 }
 
+.reservation-item__delete-button {
+  background-color: #fc0048;
+}
+
 .important-symbol {
   font-size: 12.94px;
   color: #fc0048;

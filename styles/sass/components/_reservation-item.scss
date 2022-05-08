@@ -36,4 +36,8 @@
         margin-right: 135px;
         // border: 1px solid #000;
     }
+
+    &__delete-button {
+        background-color: setColor(light-red-color);
+    }
 }
