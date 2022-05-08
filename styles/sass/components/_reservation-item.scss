@@ -39,5 +39,9 @@
 
     &__delete-button {
         background-color: setColor(light-red-color);
+
+        &:hover {
+            background-color: setColor(dark-red-color);
+        }
     }
 }

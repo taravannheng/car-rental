@@ -833,6 +833,10 @@ span {
   background-color: #fc0048;
 }
 
+.reservation-item__delete-button:hover {
+  background-color: #d90030;
+}
+
 .important-symbol {
   font-size: 12.94px;
   color: #fc0048;
