@@ -940,6 +940,11 @@ span {
   color: white;
 }
 
+.header__cart.button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;

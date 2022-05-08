@@ -18,4 +18,9 @@
     &__title {
         color: setColor(light-color);
     }
+
+    &__cart.button {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }
